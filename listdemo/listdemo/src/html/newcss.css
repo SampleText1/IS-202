@@ -9,12 +9,12 @@ and open the template in the editor.
 */
 body {
     background: #141E30;
-    text-align: center;
+    text-align: right;
     
 }
 
 h1 {
-    color: #FFFFFF;
+    color: #red;
     font-size: 3px;
     font-family: "Palpatino Linotype", helvetica;
 }
