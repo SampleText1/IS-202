@@ -15,13 +15,17 @@ body {
 
 h1 {
     color: #FFFFFF;
-    font-size: 35px;
-    font family: "Palpatino Linotype", helvetica;
+    font-size: 3px;
+    font-family: "Palpatino Linotype", helvetica;
 }
 
 h2 {
     color: #FFFFFF;
     
+}
+
+p {
+    color: #FFFFFF;
 }
 
 
