@@ -13,13 +13,13 @@ public class Student
     private static long nextId = 1;
     private final long id;
     private String name;
-    private String address;
+    private String mail;
     private String extra;
 
-    public Student(String name, String address, String extra) {
+    public Student(String name, String mail, String extra) {
         id = nextId++;
         this.name = name;
-        this.address = address;
+        this.mail = mail;
         this.extra = extra;
     }
 
@@ -60,12 +60,12 @@ public class Student
         this.name = name;
     }
 
-    public String getAddress() {
-        return address;
+    public String getMail() {
+        return mail;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setMail(String mail) {
+        this.mail = mail;
     }
 
 }

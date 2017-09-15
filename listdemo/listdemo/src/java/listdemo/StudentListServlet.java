@@ -25,11 +25,12 @@ public class StudentListServlet extends HttpServlet
 {
     public static final String PREAMBLE
             = "<!DOCTYPE html>\n" +
-            "<html>\n" +
+            "<html\n" +
             "  <head>\n" +
-            "    <meta charset=\"UTF-8\">\n" +
+            "    <meta charset='UTF-8'>\n" +
             "    <title>ListDemo</title>\n" +
-            "  </head>\n" +
+            "<link href=\"newcss.css\" type=\"text/css\" rel=\"stylesheet\">\n" +
+            "</head>\n" +
             " <body>\n";
     public static final String STUDENT
             = "      <li><a href='studentdetail?id=%d'>%s</a></li>\n";
@@ -41,7 +42,7 @@ public class StudentListServlet extends HttpServlet
 
         PrintWriter out = resp.getWriter();
         out.format(PREAMBLE);
-        out.format("    <h1>StudentList</h1>\n    <ul>\n");
+        out.format("    <h1>Studentliste</h1>\n    <ul>\n");
         for (Student s : students) {
             out.format(STUDENT, s.getId(), s.getName());
         }

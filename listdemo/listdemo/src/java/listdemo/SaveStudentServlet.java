@@ -26,20 +26,20 @@ public class SaveStudentServlet extends HttpServlet
     protected void doIt(HttpServletRequest req, HttpServletResponse resp) {
         String idStr = req.getParameter(ID);
         String name = req.getParameter(NAME);
-        String address = req.getParameter(ADDRESS);
+        String mail = req.getParameter(MAIL);
         String extra = req.getParameter(EXTRA);
 
         long id = Long.valueOf(idStr);
         StudentDb db = StudentDb.getInstance(this);
 
         if (id < 0) {
-            Student s = new Student(name, address, extra);
+            Student s = new Student(name, mail, extra);
             db.addStudent(s);
         }
         else {
             Student s = db.getStudent(id);
             s.setName(name);
-            s.setAddress(address);
+            s.setMail(mail);
             s.setExtra(extra);
             db.updateStudent(s);
         }

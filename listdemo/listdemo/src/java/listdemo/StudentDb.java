@@ -26,12 +26,12 @@ public class StudentDb implements StringConstants
     public StudentDb() {
         idMap = new HashMap<Long, Student>();
 
-        addStudent(new Student("Per", "Grua", "Ikke snill"));
-        addStudent(new Student("Paal", "Grua", "Enda verre"));
-        addStudent(new Student("Espen", "Grua", "Helten"));
-        addStudent(new Student("Kongen", "Slottet", "Slu"));
-        addStudent(new Student("Prinsessa", "Slottet", "Kverulant"));
-        addStudent(new Student("Heksa", "Skogen", "Kan trylle"));
+        addStudent(new Student("Preben Tjemsland", "Prebt16@uia.no", "Ikke snill"));
+        addStudent(new Student("Jørgen Kongsberg", "Jorgek16@uia.no", "Enda verre"));
+        addStudent(new Student("Marius Kaurin", "marigk16@uia.no", "Helten"));
+        addStudent(new Student("Abdi Gureye", "abdigu@uia.no", "Slu"));
+        addStudent(new Student("Vegard Steinnes", "Vegas@uia.no", "Kverulant"));
+        addStudent(new Student("Mikael Kimerud", "Mikak16@uia.no", "Kan trylle"));
     }
 
     public static StudentDb getInstance(HttpServlet servlet) {

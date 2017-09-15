@@ -39,7 +39,7 @@ public class StudentDetailServlet extends HttpServlet
         PrintWriter out = resp.getWriter();
 
         out.format(StudentListServlet.PREAMBLE);
-        out.format("<h1>Student details</h1>\n");
+        out.format("<h1>Studentdetaljer</h1>\n");
         if (student == null) writeEmptyForm(out);
         else writeForm(out, student);
     }
@@ -48,7 +48,7 @@ public class StudentDetailServlet extends HttpServlet
         out.format("<form>\n<table>\n");
         out.format(ID_FIELD, "Student no.", ID, 0);
         out.format(TEXT_FIELD, "Name", NAME, "");
-        out.format(TEXT_FIELD, "Address", ADDRESS, "");
+        out.format(TEXT_FIELD, "Mail", MAIL, "");
         out.format(TEXT_FIELD, "Extra info", EXTRA, "");
 
         out.format(START_BUTTON_ROW);
@@ -61,7 +61,7 @@ public class StudentDetailServlet extends HttpServlet
         out.format("<form action='savestudent'>\n<table>\n");
         out.format(ID_FIELD, "Student no.", ID, student.getId());
         out.format(TEXT_FIELD, "Name", NAME, student.getName());
-        out.format(TEXT_FIELD, "Address", ADDRESS, student.getAddress());
+        out.format(TEXT_FIELD, "Mail", MAIL, student.getMail());
         out.format(TEXT_FIELD, "Extra info", EXTRA, student.getExtra());
         out.format(START_BUTTON_ROW);
         out.format(BUTTON, "Save");

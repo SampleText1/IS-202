@@ -23,7 +23,7 @@ public interface StringConstants
     /////////////////////
     String ID = "id";
     String NAME = "name";
-    String ADDRESS = "address";
+    String MAIL = "mail";
     String EXTRA = "extra";
 
     //
