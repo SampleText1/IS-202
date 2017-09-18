@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package listdemo;
+package SLIT;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -27,20 +27,20 @@ public class SaveStudentServlet extends HttpServlet
         String idStr = req.getParameter(ID);
         String name = req.getParameter(NAME);
         String mail = req.getParameter(MAIL);
-        String extra = req.getParameter(EXTRA);
+        String karakter = req.getParameter(KARAKTER);
 
         long id = Long.valueOf(idStr);
         StudentDb db = StudentDb.getInstance(this);
 
         if (id < 0) {
-            Student s = new Student(name, mail, extra);
+            Student s = new Student(name, mail, karakter);
             db.addStudent(s);
         }
         else {
             Student s = db.getStudent(id);
             s.setName(name);
             s.setMail(mail);
-            s.setExtra(extra);
+            s.setKarakter(karakter);
             db.updateStudent(s);
         }
 

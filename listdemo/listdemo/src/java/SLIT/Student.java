@@ -1,4 +1,4 @@
-package listdemo;
+package SLIT;
 
 
 /**
@@ -14,13 +14,13 @@ public class Student
     private final long id;
     private String name;
     private String mail;
-    private String extra;
+    private String karakter;
 
-    public Student(String name, String mail, String extra) {
+    public Student(String name, String mail, String karakter) {
         id = nextId++;
         this.name = name;
         this.mail = mail;
-        this.extra = extra;
+        this.karakter = karakter;
     }
 
     @Override
@@ -40,12 +40,12 @@ public class Student
         return true;
     }
 
-    public String getExtra() {
-        return extra;
+    public String getKarakter() {
+        return karakter;
     }
 
-    public void setExtra(String extra) {
-        this.extra = extra;
+    public void setKarakter(String karakter) {
+        this.karakter = karakter;
     }
 
     public long getId() {

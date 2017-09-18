@@ -9,7 +9,7 @@
  * instead of ADDRESS, you will get an error message from the compiler
  *
  */
-package listdemo;
+package SLIT;
 
 
 /**
@@ -24,7 +24,7 @@ public interface StringConstants
     String ID = "id";
     String NAME = "name";
     String MAIL = "mail";
-    String EXTRA = "extra";
+    String KARAKTER = "karakter";
 
     //
     // REquest attributes

@@ -1,4 +1,4 @@
-package listdemo;
+package SLIT;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,12 +26,12 @@ public class StudentDb implements StringConstants
     public StudentDb() {
         idMap = new HashMap<Long, Student>();
 
-        addStudent(new Student("Preben Tjemsland", "Prebt16@uia.no", "Ikke snill"));
-        addStudent(new Student("Jørgen Kongsberg", "Jorgek16@uia.no", "Enda verre"));
-        addStudent(new Student("Marius Kaurin", "marigk16@uia.no", "Helten"));
-        addStudent(new Student("Abdi Gureye", "abdigu@uia.no", "Slu"));
-        addStudent(new Student("Vegard Steinnes", "Vegas@uia.no", "Kverulant"));
-        addStudent(new Student("Mikael Kimerud", "Mikak16@uia.no", "Kan trylle"));
+        addStudent(new Student("Preben Tjemsland", "Prebt16@uia.no", "A"));
+        addStudent(new Student("Jørgen Kongsberg", "Jorgek16@uia.no", "A"));
+        addStudent(new Student("Marius Kaurin", "marigk16@uia.no", "A"));
+        addStudent(new Student("Abdi Gureye", "abdigu@uia.no", "A"));
+        addStudent(new Student("Vegard Steinnes", "Vegas@uia.no", "A"));
+        addStudent(new Student("Mikael Kimerud", "Mikak16@uia.no", "A"));
     }
 
     public static StudentDb getInstance(HttpServlet servlet) {

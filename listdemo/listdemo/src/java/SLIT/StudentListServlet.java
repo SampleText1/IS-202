@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package listdemo;
+package SLIT;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -29,7 +29,7 @@ public class StudentListServlet extends HttpServlet
             "  <head>\n" +
             "    <meta charset='UTF-8'>\n" +
             "    <title>ListDemo</title>\n" +
-            "<link href=\"newcss.css\" type=\"text/css\" rel=\"stylesheet\">\n" +
+            "<link href=\"list.css\" type=\"text/css\" rel=\"stylesheet\">\n" +
             "</head>\n" +
             " <body>\n";
     public static final String STUDENT

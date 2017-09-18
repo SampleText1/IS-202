@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package listdemo;
+package SLIT;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -49,7 +49,7 @@ public class StudentDetailServlet extends HttpServlet
         out.format(ID_FIELD, "Student no.", ID, 0);
         out.format(TEXT_FIELD, "Name", NAME, "");
         out.format(TEXT_FIELD, "Mail", MAIL, "");
-        out.format(TEXT_FIELD, "Extra info", EXTRA, "");
+        out.format(TEXT_FIELD, "karakter info", KARAKTER, "");
 
         out.format(START_BUTTON_ROW);
         out.format(BUTTON, "Save");
@@ -62,7 +62,7 @@ public class StudentDetailServlet extends HttpServlet
         out.format(ID_FIELD, "Student no.", ID, student.getId());
         out.format(TEXT_FIELD, "Name", NAME, student.getName());
         out.format(TEXT_FIELD, "Mail", MAIL, student.getMail());
-        out.format(TEXT_FIELD, "Extra info", EXTRA, student.getExtra());
+        out.format(TEXT_FIELD, "Karakter info", KARAKTER, student.getKarakter());
         out.format(START_BUTTON_ROW);
         out.format(BUTTON, "Save");
         out.format(BUTTON, "deletestudent", DELETE);
