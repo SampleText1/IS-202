@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="listdemo" basedir="." default="default">
+<project name="SLIT" basedir="." default="default">
   <description>This is an build script. It is interpreted by the program ant.
     To execute this file from a terminal window, cd to the directory that
     contains this file, and enter the command: ant target, where target is

@@ -28,7 +28,7 @@ public class StudentListServlet extends HttpServlet
             "<html\n" +
             "  <head>\n" +
             "    <meta charset='UTF-8'>\n" +
-            "    <title>ListDemo</title>\n" +
+            "    <title>SLIT</title>\n" +
             "<link href=\"list.css\" type=\"text/css\" rel=\"stylesheet\">\n" +
             "</head>\n" +
             " <body>\n";
