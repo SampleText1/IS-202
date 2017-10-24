@@ -45,8 +45,8 @@ public class Code {
          this.Connect(out);
          String strSelect = "select * from userAccount";
  
-         System.out.println("The SQL query is: " + strSelect); // Echo For debugging
-         out. println("The SQL query is: " + strSelect);
+         // System.out.println("The SQL query is: " + strSelect); // Echo For debugging
+         // out. println("The SQL query is: " + strSelect);
          
          System.out.println();
          out.println();
@@ -57,7 +57,7 @@ public class Code {
  
                 // Step 4: Process the ResultSet by scrolling the cursor forward via next().
                 //  For each row, retrieve the contents of the cells with getXxx(columnName).
-                out.println("The records selected are:" +"<br>");
+                // out.println("Studenter i databasen:" +"<br>");
                 int rowCount = 0;
                 while(rset.next()) {   // Move the cursor to the next row, return false if no more row
                     int id = rset.getInt("id");

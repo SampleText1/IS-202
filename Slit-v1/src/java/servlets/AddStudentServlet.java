@@ -39,7 +39,8 @@ public class AddStudentServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet addStudenter</title>");            
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">");
+            out.println("<title>Student lagt til</title>");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet addStudenter at " + request.getContextPath() + "</h1>");
