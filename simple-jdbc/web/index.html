@@ -6,8 +6,8 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <title>SLIT Prosjekt</title>
+        <link rel="stylesheet" type="text/css" href="styles.css"> 
+        <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -21,16 +21,17 @@ and open the template in the editor.
                 <li> </li>
             </ul>
             
-            <form action="ListStudentsServlet" method="post">
-             <input type="Submit" name="hent" value="Hent Fra DB">        
+            <form action="hentStudenter" method="post">
+                <input type ="text" name ="modus">
+             <input type="button" name="hent" value="Hent Fra DB">        
             </form>  
             
-            <form action="addStudentServlet" method="post">
-                firstName:  <input type ="text" name ="firstName"><br>
-                lastName:   <input type ="text" name ="lastName"><br>
-                email:      <input type ="text" name ="email"><br>
-                pass:       <input type ="password" name ="password"><br>
-             <input type="Submit" name="hent" value="Legg til Student">        
+            <form action="addStudenter" method="post">
+             
+                <input type ="text" name ="id" placeholder="ID">
+              
+             <input type ="text" name ="name" placeholder="Navn">
+             <input type="button" name="hent" value="Legg til Student">        
             </form>  
             
            
