@@ -65,7 +65,7 @@ public class Code {
                     String lastName = rset.getString("lastName");
                     String email = rset.getString("email");
                     String pass = rset.getString("pass");
-                    out.println(id + ",  '" + firstName +", '" +lastName+ ", '" +email + ", '" +pass+ "<br>");
+                    out.println(id + ",  " + firstName +", " +lastName+ ", " +email + ", " +pass+ "<br>");
                     ++rowCount;
                  }  // end while
                  out.println("Total number of records = " + rowCount);
