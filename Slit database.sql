@@ -1,4 +1,5 @@
 create database Slit;
+use Slit;
 
 create table userAccount(
 	id int auto_increment primary key,
@@ -19,3 +20,9 @@ create table module(
     deadline date
 );
 
+insert into useraccount(id, firstname)
+values(1, 'Marius');
+ select * from userAccount;
+ 
+drop table userAccount;
+drop database Slit;
