@@ -1,3 +1,6 @@
+drop table userAccount;
+drop database Slit;
+
 create database Slit;
 use Slit;
 
@@ -24,5 +27,4 @@ insert into useraccount(id, firstname)
 values(1, 'Marius');
  select * from userAccount;
  
-drop table userAccount;
-drop database Slit;
+

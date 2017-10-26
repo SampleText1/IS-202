@@ -26,14 +26,35 @@ and open the template in the editor.
             </form>  
             
             <form action="addStudentServlet" method="post">
-                firstName:  <input type ="text" name ="firstName"><br>
-                lastName:   <input type ="text" name ="lastName"><br>
-                email:      <input type ="text" name ="email"><br>
-                pass:       <input type ="password" name ="password"><br>
-             <input type="Submit" name="hent" value="Legg til Student">        
-            </form>  
+                Fornavn:    <input type="text" name="firstName" placeholder="Ola"><br>
+                Etternavn:  <input type ="text" name ="lastName" placeholder="Normann"><br>
+                Email:      <input type="text" name="email" placeholder="Example@uia.no"><br>
+                Passord:    <input type ="password" name ="pass" placeholder="********" ><br>
+             <input type="Submit" name="hent" value="Legg til student">        
+            </form> 
             
-           
+            <form action="deleteStudentServlet" method="post">
+               Fornavn:   <input type="text" name="arg2"><br>
+                <input type="submit" name="hent" value="Slett">
+            </form>
+            
+             <form action="deleteStudentServlet" method="post">
+       <fieldset>
+          <legend>Selecting elements</legend>
+          <p>
+             <label>Slett med</label>
+             <select name = arg1>
+               <option value = "firstName" name="firstName">Fornavn</option>
+               <option value = "lastName" name="lastName">Etternavn</option>
+               <option value = "email" name="email">Epost</option>
+               <option value = "id" name="id">ID</option> 
+             </select>
+          </p>
+       </fieldset> 
+        Fornavn:   <input type="text" name="arg2"><br>
+       <input type="submit" name="hent" value="Slett">
+    </form>
+            
         </div>
     </body>
 </html>

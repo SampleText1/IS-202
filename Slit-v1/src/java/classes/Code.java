@@ -78,11 +78,13 @@ public class Code {
          
    }
    
-   
+    
+ 
+    
    public void addStudent(String id, String firstName, String lastName, String email, String pass, PrintWriter out){
        this.Connect(out);
         //name = name;
-        String strSelect2 = ("insert into useraccount(firstName, lastName, email) values('"+firstName+"' , '"+lastName+"' ,'"+email+"');");
+        String strSelect2 = ("insert into useraccount(firstName, lastName, email, pass) values('"+firstName+"' , '"+lastName+"' ,'"+email+"' ,'"+pass+"');");
         
         System.out.println("The SQL query is: " + strSelect2);
         out. println("The SQL query is: " + strSelect2);
@@ -109,10 +111,35 @@ public class Code {
          }
          }
    
-   
-   
-   
-   
-   
-   
+   public void deleteStudent (String arg1, String arg2, PrintWriter out){
+       this.Connect(out);
+
+       String strSelect3 = ("delete from useraccount where " + arg1 + " = '" + arg2 + "'");
+         System.out.println("The SQL query is: " + strSelect3);
+         out. println("The SQL query is: " + strSelect3);
+       try {
+            int rset3 = stmt.executeUpdate(strSelect3);
+            conn.commit();
+               if (rset3 != 0) {
+                    out.println("Record has been inserted successfully<br>" + rset3 );
+                    this.printStudents(out);
+                    
+            } else {
+                out.println("Inserting record get failure");
+            }
+       
+              } // end try    
+         catch (Exception ex) {
+              System.out.println(ex.getCause());
+              System.out.println("error");
+              out.println("Ikke hentet fra DB " +ex);
+      
+       
+   }
+   }
 }
+   
+   
+   
+   
+   
