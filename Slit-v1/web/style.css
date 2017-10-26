@@ -78,24 +78,25 @@ input[type=submit]:active {
     color: #ECF0F1;
     width: 300px;
     height: 300px;
-    overflow: scroll;
 }
 
-input[type=button] {
+.ibutton {
+    font-family: Allerta;
+    text-align: center;
+    text-decoration: none;
     background-color: #2980B9;
-    margin: 2px auto;
-    width: 200px;
-    height: 50px;
+    margin: 4px 2px;
     color: #ECF0F1;
-    display: block;
-    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+    padding: 20px 100px;
 }
 
-input[type=button]:hover {
-    background-color: #3498DB;
-    color: white;
+.ibutton:hover {
+   background-color: #3498DB;
+    color: white; 
 }
 
-input[type=button]:active {
+.ibutton:active {
     transform: translateY(0.5px);
 }
