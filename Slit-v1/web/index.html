@@ -14,11 +14,10 @@ and open the template in the editor.
     <body>
         <div>
             <h1> SLIT SampleText </h1>
-            <p> Her gjÃ¸r man ting:  </p>
+            <p> Her gjør man ting:  </p>
             <ul>
                 <li> Legger til studenter</li>
                 <li> Skriver ut alle studentene </li>
-                <li> </li>
             </ul>
             
             <form action="ListStudentsServlet" method="post">
@@ -26,7 +25,7 @@ and open the template in the editor.
             </form>  
             
             <form action="addStudentServlet" method="post">
-
+               
                 Fornavn:    <input type="text" name="firstName" placeholder="Ola"><br>
                 Etternavn:  <input type ="text" name ="lastName" placeholder="Normann"><br>
                 Email:      <input type="text" name="email" placeholder="Example@uia.no"><br>
@@ -50,6 +49,14 @@ and open the template in the editor.
         Fornavn:   <input type="text" name="arg2"><br>
        <input type="submit" name="hent" value="Slett">
     </form>
+            <form action="AddModuleServlet" method="post">
+                <input type ="text" name ="id" placeholder="ID"><br>
+                <input type ="text" name ="title" placeholder="Tittel"><br>
+                <input type ="text" name ="description" placeholder="Beskrivelse"><br>
+                <input type ="text" name ="goals" placeholder="Læringsmål"><br>
+                <input type ="text" name ="task" placeholder="Oppgave"><br>
+             <input type="Submit" name="hent" value="Legg til Modul">        
+            </form> 
    
         </div>
     </body>

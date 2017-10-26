@@ -61,7 +61,7 @@ input[type=button], input[type=submit], input[type=reset] {
     color: #ECF0F1;
     vertical-align: middle;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 3px;
 }
 
 input[type=submit]:hover {
@@ -75,7 +75,7 @@ input[type=button]:active {
 
 .list {
     font-family: ABeeZee;
-    font-size: 75%;
+    font-size: 60%;
     color: #ECF0F1;
     width: 100%;
     padding-left: 30%;
