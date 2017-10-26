@@ -85,10 +85,10 @@ public class ModuleMethods {
    public void addModule(String id, String title, String description, String goals, String task, PrintWriter out){
        this.Connect(out);
         //name = name;
-        String strSelect2 = ("insert into module(id, title, description, goals, task) values('"+id+"' , '"+title+"' , '"+description+"' ,'"+goals+"' ,'"+task+"');");
+        String strSelect2 = ("insert into modules(id, title, description, goals, task) values('"+id+"' , '"+title+"' , '"+description+"' ,'"+goals+"' ,'"+task+"');");
        
-        System.out.println("The SQL query is: " + strSelect2);
-        out. println("The SQL query is: " + strSelect2);
+        // System.out.println("The SQL query is: " + strSelect2);
+        // out. println("The SQL query is: " + strSelect2);
        
         System.out.println();
         out.println();
@@ -97,7 +97,7 @@ public class ModuleMethods {
             int rset2 = stmt.executeUpdate(strSelect2);
             conn.commit();
                if (rset2 != 0) {
-                    out.println("Record has been inserted successfully<br>" + rset2 );
+                    out.println("Modul lagt til<br>" + rset2 );
                     this.printStudents(out);
                    
             } else {

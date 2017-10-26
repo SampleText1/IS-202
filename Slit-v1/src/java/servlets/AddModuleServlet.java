@@ -34,11 +34,16 @@ public class AddModuleServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">");
-            out.println("<title>Student lagt til</title>");            
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">");
+            out.println("<title>Modul lagt til</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet AddModuleServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Modul lagt til</h1>");
+            out.println("<center>\n" +
+"             <a href=\"ansatt.html\" class=\"abutton\">Tilbake</a>\n" +
+"            </center>\n" +
+"            <br>");
+            out.println("<div class=list>"); 
            
          String title = request.getParameter("title");
          String id = request.getParameter("id");
@@ -57,6 +62,7 @@ public class AddModuleServlet extends HttpServlet {
            /* RequestDispatcher rd = request.getRequestDispatcher("hentStudenter");
             rd.forward(request, response); */
            
+            out.println("</div>");
             out.println("</body>");
             out.println("</html>");
         }

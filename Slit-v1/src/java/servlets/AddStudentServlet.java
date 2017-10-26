@@ -44,6 +44,10 @@ public class AddStudentServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Student lagt til</h1>");
+            out.println("<center>\n" +
+"             <a href=\"ansatt.html\" class=\"abutton\">Tilbake</a>\n" +
+"            </center>\n" +
+"            <br>");
             out.println("<div class=list>");
             
          String firstName = request.getParameter("firstName");

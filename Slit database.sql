@@ -10,7 +10,7 @@ create table userAccount(
 );
 
 
-create table module(
+create table modules(
 	id int primary key,
     title varchar(75),
     description varchar(250),
