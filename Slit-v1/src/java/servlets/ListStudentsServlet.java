@@ -33,17 +33,19 @@ public class ListStudentsServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ListStudentsServlet</title>");            
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">");
+            out.println("<title>Studenter</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ListStudentsServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Studenter i databasen</h1>");
+            out.println("<div class=list>");
            
            
             Code dbCode = new Code();
             dbCode.Connect(out);
             dbCode.printStudents(out);
            
-           
+            out.println("</div>");
             out.println("</body>");
             out.println("</html>");
         }
