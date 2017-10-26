@@ -68,7 +68,7 @@ public class ModuleMethods {
                     String resources = rset.getString("resources");
                     String task = rset.getString("task");
                     Date deadline = rset.getDate("deadline");
-                    out.println(id + ",  " + title +", " +description+ ", " +goals"<br>");
+                    out.println(id + ",  " + title +", " +description+ ", " +goals + "<br>");
                     ++rowCount;
                  }  // end while
                  out.println("Total number of records = " + rowCount);
