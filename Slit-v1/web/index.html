@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <title>SLIT Prosjekt</title>
+        <meta charset="Windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <h1> SLIT SampleText </h1>
+            <p> Her gjør man ting:  </p>
+            <ul>
+                <li> Legger til studenter</li>
+                <li> Skriver ut alle studentene </li>
+                <li> </li>
+            </ul>
+            
+            <form action="ListStudentsServlet" method="post">
+             <input type="Submit" name="hent" value="Hent Fra DB">        
+            </form>  
+            
+            <form action="addStudentServlet" method="post">
+
+                Fornavn:    <input type="text" name="firstName" placeholder="Ola"><br>
+                Etternavn:  <input type ="text" name ="lastName" placeholder="Normann"><br>
+                Email:      <input type="text" name="email" placeholder="Example@uia.no"><br>
+                Passord:    <input type ="password" name ="pass" placeholder="********" ><br>
+             <input type="Submit" name="hent" value="Legg til student">        
+            </form> 
+            
+             <form action="deleteStudentServlet" method="post">
+       <fieldset>
+          <legend>Selecting elements</legend>
+          <p>
+             <label>Slett med</label>
+             <select name = arg1>
+               <option value = "firstName" name="firstName">Fornavn</option>
+               <option value = "lastName" name="lastName">Etternavn</option>
+               <option value = "email" name="email">Epost</option>
+               <option value = "id" name="id">ID</option> 
+             </select>
+          </p>
+       </fieldset> 
+        Fornavn:   <input type="text" name="arg2"><br>
+       <input type="submit" name="hent" value="Slett">
+    </form>
+   
+        </div>
+    </body>
+</html>
