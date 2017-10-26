@@ -25,4 +25,5 @@ values(1, 'Marius');
  select * from userAccount;
  
 drop table userAccount;
+drop table module;
 drop database Slit;

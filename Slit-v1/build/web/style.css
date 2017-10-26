@@ -4,7 +4,7 @@
 
 body {
     background-color: #2C3E50;
-    margin: auto;
+    margin: 0 auto;
     width: 40%;
     position: fixed;
     top: 50%;
@@ -85,11 +85,13 @@ input[type=submit]:active {
     text-align: center;
     text-decoration: none;
     background-color: #2980B9;
-    margin: 4px 2px;
+    margin: 0 auto;
     color: #ECF0F1;
     display: inline-block;
     cursor: pointer;
-    padding: 20px 100px;
+    padding: 20px;
+    width: 200px;
+    
 }
 
 .ibutton:hover {
@@ -98,5 +100,28 @@ input[type=submit]:active {
 }
 
 .ibutton:active {
+    transform: translateY(0.5px);
+}
+
+.abutton {
+    font-family: Allerta;
+    text-align: center;
+    text-decoration: none;
+    background-color: #2980B9;
+    margin: 0 auto;
+    color: #ECF0F1;
+    display: inline-block;
+    cursor: pointer;
+    padding: 20px;
+    width: 100px;
+    
+}
+
+.abutton:hover {
+   background-color: #3498DB;
+    color: white; 
+}
+
+.abutton:active {
     transform: translateY(0.5px);
 }

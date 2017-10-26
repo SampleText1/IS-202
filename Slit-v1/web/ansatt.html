@@ -14,15 +14,18 @@ and open the template in the editor.
     <body>
         <div>
             <h1> SLIT SampleText </h1>
-            <p> Her gjør man ting:  </p>
-            <ul>
-                <li> Legger til studenter</li>
-                <li> Skriver ut alle studentene </li>
-            </ul>
+            <center>
+             <a href="index.html" class="abutton">Hjem</a>
+            </center>
+            <br>
             
             <form action="ListStudentsServlet" method="post">
              <input type="Submit" name="hent" value="Elevliste">        
             </form>  
+            
+            <form action="ListModulesServlet" method="post">
+             <input type="Submit" name="hent" value="Modulliste">        
+            </form> 
             
             <form action="addStudentServlet" method="post">
                 <input type ="text" name ="firstName" placeholder="Fornavn"><br>
@@ -30,8 +33,19 @@ and open the template in the editor.
                 <input type ="text" name ="email" placeholder="E-Mail"><br>
                 <input type ="password" name ="password" placeholder="Passord"><br>
              <input type="Submit" name="hent" value="Legg til Student">        
-            </form>  
+            </form>
             
+            <form action="AddModuleServlet" method="post">
+                <input type ="text" name ="id" placeholder="ID"><br>
+                <input type ="text" name ="title" placeholder="Tittel"><br>
+                <input type ="text" name ="description" placeholder="Beskrivelse"><br>
+                <input type ="text" name ="goals" placeholder="Læringsmål"><br>
+                <input type ="text" name ="task" placeholder="Oppgave"><br>
+             
+               
+             <input type="Submit" name="hent" value="Legg til Modul">        
+            </form>
+              
            
         </div>
     </body>

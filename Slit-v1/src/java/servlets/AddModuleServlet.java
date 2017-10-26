@@ -1,8 +1,9 @@
 package servlets;
  
-import classes.Code;
+import classes.ModuleMethods;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,10 +14,10 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Mikael
  */
-@WebServlet(name = "ListStudentsServlet", urlPatterns = {"/ListStudentsServlet"})
-public class ListStudentsServlet extends HttpServlet {
+@WebServlet(name = "AddModuleServlet", urlPatterns = {"/AddModuleServlet"})
+public class AddModuleServlet extends HttpServlet {
  
-    /**
+ /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *
@@ -33,23 +34,29 @@ public class ListStudentsServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">");
-            out.println("<title>Studenter</title>");            
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">");
+            out.println("<title>Student lagt til</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Studenter i databasen</h1>");
-            out.println("<center>\n" +
-"             <a href=\"ansatt.html\" class=\"abutton\">Tilbake</a>\n" +
-"            </center>\n" +
-"            <br>");
-            out.println("<div class=list>");
+            out.println("<h1>Servlet AddModuleServlet at " + request.getContextPath() + "</h1>");
            
+         String title = request.getParameter("title");
+         String id = request.getParameter("id");
+         String description = request.getParameter("description");
+         String goals = request.getParameter("goals");
+         //String resources = request.getParameter("resources");
+         String task = request.getParameter("task");
+         //String deadline = request.getParameter("deadline");
+         
+         //Date deadline2 = Date.valueOf(deadline);
            
-            Code dbCode = new Code();
-            dbCode.Connect(out);
-            dbCode.printStudents(out);
+            ModuleMethods mm = new ModuleMethods();
+            mm.Connect(out);
+            mm.addModule(id, title, description, goals, task, out);
            
-            out.println("</div>");
+           /* RequestDispatcher rd = request.getRequestDispatcher("hentStudenter");
+            rd.forward(request, response); */
+           
             out.println("</body>");
             out.println("</html>");
         }
@@ -82,16 +89,11 @@ public class ListStudentsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+       
+     
+  }
+       
+       
+       
+       
     }
- 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
- 
-}

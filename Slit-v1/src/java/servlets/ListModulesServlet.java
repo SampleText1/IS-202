@@ -1,6 +1,6 @@
 package servlets;
  
-import classes.Code;
+import classes.ModuleMethods;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Mikael
  */
-@WebServlet(name = "ListStudentsServlet", urlPatterns = {"/ListStudentsServlet"})
-public class ListStudentsServlet extends HttpServlet {
+@WebServlet(name = "ListModulesServlet", urlPatterns = {"/ListModulesServlet"})
+public class ListModulesServlet extends HttpServlet {
  
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,10 +34,10 @@ public class ListStudentsServlet extends HttpServlet {
             out.println("<html>");
             out.println("<head>");
             out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">");
-            out.println("<title>Studenter</title>");            
+            out.println("<title>Moduler</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Studenter i databasen</h1>");
+            out.println("<h1>Moduler i databasen</h1>");
             out.println("<center>\n" +
 "             <a href=\"ansatt.html\" class=\"abutton\">Tilbake</a>\n" +
 "            </center>\n" +
@@ -45,7 +45,7 @@ public class ListStudentsServlet extends HttpServlet {
             out.println("<div class=list>");
            
            
-            Code dbCode = new Code();
+            ModuleMethods dbCode = new ModuleMethods();
             dbCode.Connect(out);
             dbCode.printStudents(out);
            
