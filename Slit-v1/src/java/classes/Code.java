@@ -84,8 +84,8 @@ public class Code {
         //name = name;
         String strSelect2 = ("insert into useraccount(firstName, lastName, email) values('"+firstName+"' , '"+lastName+"' ,'"+email+"');");
         
-        System.out.println("The SQL query is: " + strSelect2);
-        out. println("The SQL query is: " + strSelect2);
+        // System.out.println("The SQL query is: " + strSelect2);
+        // out. println("The SQL query is: " + strSelect2);
        
         System.out.println();
         out.println();
@@ -94,7 +94,7 @@ public class Code {
             int rset2 = stmt.executeUpdate(strSelect2);
             conn.commit();
                if (rset2 != 0) {
-                    out.println("Record has been inserted successfully<br>" + rset2 );
+                    out.println("Student lagt til<br>" + rset2 );
                     this.printStudents(out);
                     
             } else {

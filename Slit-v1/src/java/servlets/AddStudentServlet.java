@@ -1,4 +1,4 @@
-package servlets;
+    package servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -39,11 +39,12 @@ public class AddStudentServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">");
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">");
             out.println("<title>Student lagt til</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet addStudenter at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Student lagt til</h1>");
+            out.println("<div class=list>");
             
          String firstName = request.getParameter("firstName");
          String id = request.getParameter("id");
@@ -58,6 +59,7 @@ public class AddStudentServlet extends HttpServlet {
            /* RequestDispatcher rd = request.getRequestDispatcher("hentStudenter"); 
             rd.forward(request, response); */
            
+            out.println("</div>");
             out.println("</body>");
             out.println("</html>");
         }

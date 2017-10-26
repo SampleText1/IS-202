@@ -33,7 +33,7 @@ public class ListStudentsServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">");
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">");
             out.println("<title>Studenter</title>");            
             out.println("</head>");
             out.println("<body>");

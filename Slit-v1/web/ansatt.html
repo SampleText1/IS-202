@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>SLIT Prosjekt</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <h1> SLIT SampleText </h1>
+            <p> Her gjør man ting:  </p>
+            <ul>
+                <li> Legger til studenter</li>
+                <li> Skriver ut alle studentene </li>
+            </ul>
+            
+            <form action="ListStudentsServlet" method="post">
+             <input type="Submit" name="hent" value="Elevliste">        
+            </form>  
+            
+            <form action="addStudentServlet" method="post">
+                <input type ="text" name ="firstName" placeholder="Fornavn"><br>
+                <input type ="text" name ="lastName" placeholder="Etternavn"><br>
+                <input type ="text" name ="email" placeholder="E-Mail"><br>
+                <input type ="password" name ="password" placeholder="Passord"><br>
+             <input type="Submit" name="hent" value="Legg til Student">        
+            </form>  
+            
+           
+        </div>
+    </body>
+</html>
