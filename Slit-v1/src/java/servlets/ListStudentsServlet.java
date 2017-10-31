@@ -1,6 +1,6 @@
 package servlets;
  
-import classes.Code;
+import classes.StudentMethods;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -42,10 +42,17 @@ public class ListStudentsServlet extends HttpServlet {
 "             <a href=\"ansatt.html\" class=\"abutton\">Tilbake</a>\n" +
 "            </center>\n" +
 "            <br>");
+            out.println("<form action=\"deleteStudentServlet\" method=\"post\">\n" +
+"             <p>\n" +
+"             </p>\n" +
+"             <input type=\"text\" name=\"arg2\" placeholder=\"ID\"><br>\n" +
+"              <input type=\"submit\" name=\"hent\" value=\"Slett\">\n" +
+"             </form>" +
+            "<br>");
             out.println("<div class=list>");
            
            
-            Code dbCode = new Code();
+            StudentMethods dbCode = new StudentMethods();
             dbCode.Connect(out);
             dbCode.printStudents(out);
            

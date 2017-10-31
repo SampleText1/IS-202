@@ -41,7 +41,7 @@ public class ModuleMethods {
     }
    
    
-    public void printStudents(PrintWriter out)
+    public void printModules(PrintWriter out)
     {
          this.Connect(out);
          String strSelect = "select * from modules";
@@ -71,7 +71,7 @@ public class ModuleMethods {
                     out.println(id + ",  " + title +", " +description+ ", " +goals + "<br>");
                     ++rowCount;
                  }  // end while
-                 out.println("Total number of records = " + rowCount);
+                 out.println("Antall moduler i databasen = " + rowCount);
          } // end try    
          catch (SQLException ex) {
                 out.println("Ikke hentet fra DB " +ex);
@@ -98,13 +98,13 @@ public class ModuleMethods {
             conn.commit();
                if (rset2 != 0) {
                     out.println("Modul lagt til<br>" + rset2 );
-                    this.printStudents(out);
+                    this.printModules(out);
                    
             } else {
                 out.println("Inserting record get failure");
             }
        
-              } // end try    
+              } // end try     // end try    
          catch (Exception ex) {
               System.out.println(ex.getCause());
               System.out.println("error");

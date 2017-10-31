@@ -13,7 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import classes.Code;
+import classes.StudentMethods;
 
 /**
  *
@@ -56,7 +56,7 @@ public class AddStudentServlet extends HttpServlet {
          String email = request.getParameter("email");
          String pass = request.getParameter("pass");
             
-            Code dbCode = new Code(); 
+            StudentMethods dbCode = new StudentMethods(); 
             dbCode.Connect(out);
             dbCode.addStudent(id, firstName, lastName, email, pass, out); 
             

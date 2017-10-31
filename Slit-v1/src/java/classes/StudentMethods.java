@@ -14,7 +14,7 @@ import javax.sql.DataSource;
  *
  * @author Mikael
  */
-public class Code {
+public class StudentMethods {
    
       Connection conn;        // Must be defined here as class variables, get their value in the login method
     Statement stmt;         //Slik at de forsvinner.
@@ -65,10 +65,11 @@ public class Code {
                     String lastName = rset.getString("lastName");
                     String email = rset.getString("email");
                     String pass = rset.getString("pass");
-                    out.println(id + ",  " + firstName +", " +lastName+ ", " +email + ", " +pass+ "<br>");
+                    out.println(id + ".  " + firstName +" " +lastName+ ", " +email + ", " +pass+ "<br>");
                     ++rowCount;
                  }  // end while
-                 out.println("Total number of records = " + rowCount);
+                 out.println("<br>");
+                 out.println("Antall elever i databasen = " + rowCount);
          } // end try    
          catch (SQLException ex) {
                 out.println("Ikke hentet fra DB " +ex);
@@ -94,7 +95,7 @@ public class Code {
             int rset2 = stmt.executeUpdate(strSelect2);
             conn.commit();
                if (rset2 != 0) {
-                    out.println("Student lagt til<br>" + rset2 );
+                    //out.println(rset2);
                     this.printStudents(out);
                     
             } else {
@@ -112,15 +113,15 @@ public class Code {
    
    public void deleteStudent(String arg1, String arg2, PrintWriter out){
    this.Connect(out);
-   String strSelect3 = ("delete from useraccount where " + arg1 + " = '" + arg2 + "'");
+   String strSelect3 = ("delete from useraccount where id = '" + arg2 + "'");
    
-     System.out.println("The SQL query is: " + strSelect3);
-         out. println("The SQL query is: " + strSelect3);
+     // System.out.println("The SQL query is: " + strSelect3);
+        // out. println("The SQL query is: " + strSelect3);
        try {
             int rset3 = stmt.executeUpdate(strSelect3);
             conn.commit();
                if (rset3 != 0) {
-                    out.println("Record has been inserted successfully<br>" + rset3 );
+                    // out.println("Record has been inserted successfully<br>" + rset3 );
                     this.printStudents(out);
                     
             } else {

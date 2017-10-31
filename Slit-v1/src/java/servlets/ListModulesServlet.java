@@ -47,7 +47,7 @@ public class ListModulesServlet extends HttpServlet {
            
             ModuleMethods dbCode = new ModuleMethods();
             dbCode.Connect(out);
-            dbCode.printStudents(out);
+            dbCode.printModules(out);
            
             out.println("</div>");
             out.println("</body>");

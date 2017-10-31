@@ -5,7 +5,7 @@
  */
 package servlets;
 
-import classes.Code;
+import classes.StudentMethods;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -40,33 +40,33 @@ public class DeleteStudentServlet extends HttpServlet {
             out.println("<html>");
             out.println("<head>");
             out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">");
-            out.println("<title>Servlet deleteStudentServlet</title>");            
+            out.println("<title>fakk deleteStudentServlet</title>");            
             out.println("</head>");
             out.println("<body>");
+            
+            out.println("<center>\n" +
+"             <a href=\"ListStudentsServlet\" class=\"abutton\">Tilbake</a>\n" +
+"            </center>\n" +
+"            <br>");
+            
             String arg1 = request.getParameter("arg1");
             String arg2 = request.getParameter("arg2");
-            if (arg1.equals ("firstName")){
-            arg1 = "Fornavn";}
-            else if (arg1.equals ("lastName")){
-            arg1 = "Etternavn";}
-            else if (arg1.equals ("email")){
-            arg1 = "Epost";}
-            else if (arg1.equals ("id")){
+            
+            StudentMethods dbCode = new StudentMethods(); 
+            dbCode.Connect(out);
+            dbCode.deleteStudent(arg1, arg2, out);
+            
+            if (arg1.equals ("id")){
             arg1 = "ID";}
             else{
                 arg1 = "failed to find argument";
-        }
+            }
+         
             
-            out.println("<h1>Student med " +arg2 + " som " +arg1 + " slettet</h1>");
-            out.println("<center>\n" +
-"             <a href=\"ansatt.html\" class=\"abutton\">Tilbake</a>\n" +
-"            </center>\n" +
-"            <br>");
+            out.println("<h2>Student med " +arg2 + " som ID slettet</h2>");
            
             
-            Code dbCode = new Code(); 
-            dbCode.Connect(out);
-            dbCode.deleteStudent(arg1, arg2, out);
+            
             out.println("</body>");
             out.println("</html>");
         }

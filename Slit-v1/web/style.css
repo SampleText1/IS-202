@@ -21,6 +21,14 @@ h1 {
     letter-spacing: 5px;
     text-align: center;
 }
+
+h2 {
+    color: #ECF0F1;
+    font-family: Khula;
+    font-size: 120%;
+    letter-spacing: 5px;
+    text-align: center;
+}
 p  {
     color: #ECF0F1;
     font-family: ABeeZee;
