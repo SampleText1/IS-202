@@ -107,7 +107,34 @@ public class Code {
               System.out.println("error");
               out.println("Ikke hentet fra DB " +ex);
          }
-         }
+   }
+   
+   
+   public void deleteStudent(String arg1, String arg2, PrintWriter out){
+   this.Connect(out);
+   String strSelect3 = ("delete from useraccount where " + arg1 + " = '" + arg2 + "'");
+   
+     System.out.println("The SQL query is: " + strSelect3);
+         out. println("The SQL query is: " + strSelect3);
+       try {
+            int rset3 = stmt.executeUpdate(strSelect3);
+            conn.commit();
+               if (rset3 != 0) {
+                    out.println("Record has been inserted successfully<br>" + rset3 );
+                    this.printStudents(out);
+                    
+            } else {
+                out.println("Inserting record get failure");
+            }
+       
+              } // end try    
+         catch (Exception ex) {
+              System.out.println(ex.getCause());
+              System.out.println("error");
+              out.println("Ikke hentet fra DB " +ex);
+      
+       
+   }
    
    
    
@@ -115,4 +142,5 @@ public class Code {
    
    
    
+}
 }
