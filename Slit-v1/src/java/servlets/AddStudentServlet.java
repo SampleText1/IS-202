@@ -47,6 +47,7 @@ public class AddStudentServlet extends HttpServlet {
             
          String firstName = request.getParameter("firstName");
          String id = request.getParameter("id");
+         //int id2 = Integer.parseInt(id);   Må man ha dette?!
          String lastName = request.getParameter("lastName");
          String email = request.getParameter("email");
          String pass = request.getParameter("pass");
@@ -54,6 +55,9 @@ public class AddStudentServlet extends HttpServlet {
             Code dbCode = new Code(); 
             dbCode.Connect(out);
             dbCode.addStudent(id, firstName, lastName, email, pass, out); 
+            
+            dbCode.commit();
+           // db.Code.Close()   BURDE DISSE VÆRE MED? 
             
            /* RequestDispatcher rd = request.getRequestDispatcher("hentStudenter"); 
             rd.forward(request, response); */
