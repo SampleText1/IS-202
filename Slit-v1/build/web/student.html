@@ -10,15 +10,17 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
+    <body>
+        <div>
             <h1> SLIT SampleText </h1>
-            <center>
-            <form method="post" action="login">
-            <input type="text" name="email" placeholder="Email" /><br/>
-            <input type="password" name="pass" placeholder="Passord" /><br/>
-            <input type="submit" value="Logg inn" />
+            <form action="ListModulesServlet" method="post">
+             <input type="Submit" name="hent" value="Modulliste">        
             </form>
-            <!--
-            <a href="ansatt.html" class="ibutton">Ansatt</a>
-            <a href="student.html" class="ibutton">Studenter</a>
+            <br>
+            <center>
+             <form action="index.html" method="post">
+             <input type="Submit" name="hent" value="Logg ut">
+             </form>
             </center>
-            -->
+        </div>
+    </body>

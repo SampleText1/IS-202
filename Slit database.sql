@@ -22,8 +22,22 @@ create table modules(
 
 insert into useraccount(id, firstname)
 values(1, 'Marius');
- select * from userAccount;
- 
-drop table userAccount;
-drop table modules;
-drop database Slit;
+
+use slit;
+
+CREATE TABLE users (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+insert into users(username, password)
+values('vegard2', 'passord22');
+
+select * from userAccount;
+
+delete from userAccount;
+where id = 1;
+
+
