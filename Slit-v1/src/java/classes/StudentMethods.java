@@ -43,7 +43,7 @@ public class StudentMethods {
     public void printStudents(PrintWriter out)
     {
          this.Connect(out);
-         String strSelect = "select * from userAccount";
+         String strSelect = "SELECT * FROM useraccount";
  
          // System.out.println("The SQL query is: " + strSelect); // Echo For debugging
          // out. println("The SQL query is: " + strSelect);
@@ -83,7 +83,7 @@ public class StudentMethods {
    public void addStudent(String id, String firstName, String lastName, String email, String pass, PrintWriter out){
        this.Connect(out);
         //name = name;
-        String strSelect2 = ("insert into useraccount(firstName, lastName, email, pass) values('"+firstName+"' , '"+lastName+"' ,'"+email+"' , '"+pass+"');");
+        String strSelect2 = ("insert into userAccount(firstName, lastName, email, pass) values('"+firstName+"' , '"+lastName+"' ,'"+email+"' , '"+pass+"');");
         
         // System.out.println("The SQL query is: " + strSelect2);
         // out. println("The SQL query is: " + strSelect2);
@@ -113,7 +113,7 @@ public class StudentMethods {
    
    public void deleteStudent(String arg1, String arg2, PrintWriter out){
    this.Connect(out);
-   String strSelect3 = ("delete from useraccount where id = '" + arg2 + "'");
+   String strSelect3 = ("delete from userAccount where id = '" + arg2 + "'");
    
      // System.out.println("The SQL query is: " + strSelect3);
         // out. println("The SQL query is: " + strSelect3);

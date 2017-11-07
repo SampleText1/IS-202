@@ -6,6 +6,7 @@ body {
     background-color: #2C3E50;
     margin: 0 auto;
     width: 40%;
+    max-width: 40%;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -52,7 +53,8 @@ form {
 }
 
 input {
-    font-family: Allerta;
+    font-family: Calibri;
+    font-size: 90%;
     background-color: #ECF0F1;
     border: 0px;
     text-align: center;
@@ -101,6 +103,8 @@ input[type=submit]:active {
     cursor: pointer;
     padding: 20px;
     width: 200px;
+    max-width: 100%;
+    border-radius: 4px;
     
 }
 
@@ -124,6 +128,7 @@ input[type=submit]:active {
     cursor: pointer;
     padding: 20px;
     width: 100px;
+    border-radius: 4px;
     
 }
 

@@ -39,7 +39,7 @@ public class ListStudentsServlet extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Studenter i databasen</h1>");
             out.println("<center>\n" +
-"             <a href=\"ansatt.html\" class=\"abutton\">Tilbake</a>\n" +
+"            <input type=\"button\" class=\"abutton\" onclick=\"history.back();\" value=\"Tilbake\">\n" +
 "            </center>\n" +
 "            <br>");
             out.println("<form action=\"deleteStudentServlet\" method=\"post\">\n" +

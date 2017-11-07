@@ -45,7 +45,7 @@ public class DeleteStudentServlet extends HttpServlet {
             out.println("<body>");
             
             out.println("<center>\n" +
-"             <a href=\"ListStudentsServlet\" class=\"abutton\">Tilbake</a>\n" +
+"             <input type=\"button\" class=\"abutton\" onclick=\"history.back();\" value=\"Tilbake\">\n" +
 "            </center>\n" +
 "            <br>");
             
