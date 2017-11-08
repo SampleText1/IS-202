@@ -140,8 +140,6 @@ input[type=submit]:active {
 .abutton:active {
     transform: translateY(0.5px);
 }
-<<<<<<< HEAD
-=======
 
 .alert {
     font-family: Allerta;
@@ -174,4 +172,3 @@ input[type=submit]:active {
         visibility:hidden;
     }
 }
->>>>>>> Vegard
