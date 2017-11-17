@@ -14,7 +14,7 @@ public class Validate
 
  	 //creating connection with the database 
          Connection con=DriverManager.getConnection
-                        ("jdbc:mariadb://localhost:3306/slit","Vegard", "");
+                        ("jdbc:mariadb://localhost:3306/slit","root","");
          PreparedStatement ps =con.prepareStatement
                              ("select * from userAccount where email=? and pass=? and admin=1");
          ps.setString(1, email);
@@ -37,7 +37,7 @@ public class Validate
 
  	 //creating connection with the database 
          Connection con=DriverManager.getConnection
-                        ("jdbc:mariadb://localhost:3306/slit","Vegard", "");
+                        ("jdbc:mariadb://localhost:3306/slit","root","");
          PreparedStatement ps =con.prepareStatement
                              ("select * from userAccount where email=? and pass=?");
          ps.setString(1, email);

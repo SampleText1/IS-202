@@ -3,6 +3,7 @@ package classes;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.Date;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -41,47 +42,78 @@ public class ModuleMethods {
     }
    
    
-    public void printModules(PrintWriter out)
-    {
-         this.Connect(out);
-         String strSelect = "select * from modules";
- 
-         // System.out.println("The SQL query is: " + strSelect); // Echo For debugging
-         // out. println("The SQL query is: " + strSelect);
+    public void printModules(PrintWriter out) {
+        
+        String STUDENT  = "<li><a href='ModuleDetail?id=%s'>%s</a></li>\n"; 
+                               
+        PreparedStatement getModules; 
          
-         System.out.println();
-         out.println();
- 
          try {
-             
-                ResultSet rset = stmt.executeQuery(strSelect); //En slags iterator
+                getModules = conn.prepareStatement("select * from module");
+                //getModules.setString(1,"lastName");
+                
+                ResultSet rset = getModules.executeQuery();
  
                 // Step 4: Process the ResultSet by scrolling the cursor forward via next().
                 //  For each row, retrieve the contents of the cells with getXxx(columnName).
-                // out.println("Studenter i databasen:" +"<br>");
+                out.println("Modulene:" +"<br>");
                 int rowCount = 0;
                 while(rset.next()) {   // Move the cursor to the next row, return false if no more row
-                    int id = rset.getInt("id");
-                    String title   = rset.getString("title");
-                    String description = rset.getString("description");
-                    String goals = rset.getString("goals");
-                    String resources = rset.getString("resources");
-                    String task = rset.getString("task");
-                    Date deadline = rset.getDate("deadline");
-                    out.println(id + ",  " + title +", " +description+ ", " +goals + "<br>");
+                    out.println("Modul "+ (rowCount +1)+ ":<br>");
+                    String id = rset.getString("id");
+                    String title = rset.getString("title");
+                    String description   = rset.getString("description");
+                    out.println("ID: " +id + ", Tittel: " + title + ", Beskrivelse: " + description +"<br>");
+                    out.format(STUDENT,id,title); 
+                    out.format("<br>Informasjon:" +"<br>");
+                    
                     ++rowCount;
                  }  // end while
-                 out.println("Antall moduler i databasen = " + rowCount);
-         } // end try    
+                 out.println("Antall moduler = " + rowCount);
+         } // end try     
          catch (SQLException ex) {
                 out.println("Ikke hentet fra DB " +ex);
          }
          
          
-         
    }
    
-   
+   public void skrivEnModul(String id, PrintWriter out)
+    {   
+       
+        //PRØVER Å KOMBINERE FLERE TABELLER
+        PreparedStatement getStudents; 
+         
+         try {
+                getStudents = conn.prepareStatement("select * from module where id=?");
+                getStudents.setString(1,id);
+                
+                ResultSet rset = getStudents.executeQuery();
+                out.println("Test for å sjekke at man er i skrivEnModul<br>");    
+                // Step 4: Process the ResultSet by scrolling the cursor forward via next().
+                //  For each row, retrieve the contents of the cells with getXxx(columnName).
+                out.println("The records selected are:" +"<br>");
+                
+                //BRUKER IF FORDI DU TRENGER KUN Å SJEKKE 1 GANG
+               
+                while(rset.next()) {   // Move the cursor to the next row, return false if no more row
+                    String idString = rset.getString("id");
+                    String title = rset.getString("title");
+                    String description   = rset.getString("description");
+                    
+                    
+                    out.println("StudentID: " +idString + "<br> Fornavn: " + title + "<br> Etternavn: " + description + "<br>");
+                   
+                   out.format("<br>Moduler:" +"<br>");
+                    
+                   
+                 }  // end if
+    } // end try     
+         catch (SQLException ex) {
+                out.println("Ikke hentet fra DB " +ex);
+         }
+    }
+    
    public void addModule(String id, String title, String description, String goals, String task, PrintWriter out){
        this.Connect(out);
         //name = name;

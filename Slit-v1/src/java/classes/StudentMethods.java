@@ -2,6 +2,7 @@ package classes;
  
 import java.io.PrintWriter;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -40,43 +41,97 @@ public class StudentMethods {
     }
    
    
-    public void printStudents(PrintWriter out)
-    {
-         this.Connect(out);
-         String strSelect = "SELECT * FROM useraccount";
- 
-         // System.out.println("The SQL query is: " + strSelect); // Echo For debugging
-         // out. println("The SQL query is: " + strSelect);
+    public void printStudents(PrintWriter out) {
+        
+        String STUDENT  = "<li><a href='StudentDetail?id=%s'>%s %s</a></li>\n"; 
+                               
+        PreparedStatement getStudents; 
          
-         System.out.println();
-         out.println();
- 
          try {
-             
-                ResultSet rset = stmt.executeQuery(strSelect); //En slags iterator
+                getStudents = conn.prepareStatement("select * from useraccount order by ?");
+                getStudents.setString(1,"lastName");
+                
+                ResultSet rset = getStudents.executeQuery();
  
                 // Step 4: Process the ResultSet by scrolling the cursor forward via next().
                 //  For each row, retrieve the contents of the cells with getXxx(columnName).
-                // out.println("Studenter i databasen:" +"<br>");
+                out.println("Oversikt over elevene i emnet:" +"<br>");
                 int rowCount = 0;
                 while(rset.next()) {   // Move the cursor to the next row, return false if no more row
-                    int id = rset.getInt("id");
-                    String firstName   = rset.getString("firstName");
-                    String lastName = rset.getString("lastName");
-                    String email = rset.getString("email");
-                    String pass = rset.getString("pass");
-                    out.println(id + ".  " + firstName +" " +lastName+ ", " +email + ", " +pass+ "<br>");
+                    String id = rset.getString("id");
+                    String firstName = rset.getString("firstName");
+                    String lastName   = rset.getString("lastName");
+                    out.println("ID: " +id + ", Fornavn: " + firstName + ", Etternavn: " + lastName +"<br>");
+                    out.format(STUDENT,id,lastName,firstName); 
+                    out.format("Informasjon:" +"<br>");
+                    
                     ++rowCount;
                  }  // end while
-                 out.println("<br>");
-                 out.println("Antall elever i databasen = " + rowCount);
-         } // end try    
+                 out.println("Total number of records = " + rowCount);
+         } // end try     
          catch (SQLException ex) {
                 out.println("Ikke hentet fra DB " +ex);
          }
          
+   }
+    
+    
+    public void skrivEnStudent(String id, PrintWriter out)
+    {   
+       
+        //Kombinerer flere tabeller! Må ha useraccount, module og modulbesvarelse tabeller!
+        PreparedStatement getStudents; 
          
-         
+         try {
+                getStudents = conn.prepareStatement("select * from modulbesvarelse\n" +
+"join useraccount\n" +
+"			on modulbesvarelse.s_id=useraccount.id\n" +
+"join module\n" +
+"			on modulbesvarelse.m_id=module.id\n" +
+"where modulbesvarelse.s_id=?;");
+                getStudents.setString(1,id);
+                
+                ResultSet rset = getStudents.executeQuery();
+                out.println("Test for å sjekke at man er i skrivEnStudent<br>");    
+                // Step 4: Process the ResultSet by scrolling the cursor forward via next().
+                //  For each row, retrieve the contents of the cells with getXxx(columnName).
+                out.println("Valgt elev er:" +"<br>");
+                
+                //BRUKER IF FORDI DU TRENGER KUN Å SJEKKE 1 GANG
+                if (rset.next()) {   // Move the cursor to the next row, return false if no more row
+                    String idString = rset.getString("s_id");
+                    String firstName = rset.getString("firstName");
+                    String lastName   = rset.getString("lastName");
+                    String email = rset.getString("email");
+                    
+                    out.println("StudentID: " +idString + "<br> Fornavn: " + firstName + "<br> Etternavn: " + lastName +"<br> Email: "+email+"<br>");
+                   
+                   out.format("<br>Moduler:" +"<br>");
+                    
+                    
+                 }  // end if
+                
+                int rowCount = 0;
+                rset.beforeFirst(); //Måtte ha med denne, ellers ble den første raden hoppet over!
+                while (rset.next()) {   // Move the cursor to the next row, return false if no more row
+                  
+                   String title = rset.getString("title");
+                   String vurdering = rset.getString("vurdering");
+                   String m_id = rset.getString("m_id");
+                 
+                  out.println("ModulID: " +m_id+ " Module navn: "+title+" Vurdering: "+vurdering+"<br>");
+                   
+                    
+                    ++rowCount;
+                 }  // end while
+                 out.println("Total number of records = " + rowCount);
+         } // end try     
+         catch (SQLException ex) {
+                out.println("Ikke hentet fra DB " +ex);
+         }
+        
+        
+        
    }
    
    
