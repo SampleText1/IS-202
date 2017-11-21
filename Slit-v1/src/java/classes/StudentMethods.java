@@ -43,7 +43,7 @@ public class StudentMethods {
    
     public void printStudents(PrintWriter out) {
         
-        String STUDENT  = "<li><a href='StudentDetail?id=%s'>%s %s</a></li>\n"; 
+        String STUDENT  = "<a href='StudentDetail?id=%s'>%s, %s</a>\n"; 
                                
         PreparedStatement getStudents; 
          
@@ -53,21 +53,23 @@ public class StudentMethods {
                 
                 ResultSet rset = getStudents.executeQuery();
  
-                // Step 4: Process the ResultSet by scrolling the cursor forward via next().
-                //  For each row, retrieve the contents of the cells with getXxx(columnName).
-                out.println("Oversikt over elevene i emnet:" +"<br>");
+                out.println("<h4>Oversikt over elevene i emnet:</h4>");
                 int rowCount = 0;
                 while(rset.next()) {   // Move the cursor to the next row, return false if no more row
                     String id = rset.getString("id");
                     String firstName = rset.getString("firstName");
                     String lastName   = rset.getString("lastName");
-                    out.println("ID: " +id + ", Fornavn: " + firstName + ", Etternavn: " + lastName +"<br>");
-                    out.format(STUDENT,id,lastName,firstName); 
-                    out.format("Informasjon:" +"<br>");
+                    out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">");
+                    out.println("<div class=stulist>");
+                    out.println("ID: " + id + " - ");
+                    out.format(STUDENT, id, lastName, firstName);
+                    out.println("</div>");
+                    out.println("<br>");
                     
                     ++rowCount;
                  }  // end while
-                 out.println("Total number of records = " + rowCount);
+                 out.println("<br>");
+                 out.println("Antall elever = " + rowCount);
          } // end try     
          catch (SQLException ex) {
                 out.println("Ikke hentet fra DB " +ex);
@@ -92,10 +94,10 @@ public class StudentMethods {
                 getStudents.setString(1,id);
                 
                 ResultSet rset = getStudents.executeQuery();
-                out.println("Test for å sjekke at man er i skrivEnStudent<br>");    
+                out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">");    
                 // Step 4: Process the ResultSet by scrolling the cursor forward via next().
                 //  For each row, retrieve the contents of the cells with getXxx(columnName).
-                out.println("Valgt elev er:" +"<br>");
+                out.println("<h3>Valgt elev er:" +"<br>");
                 
                 //BRUKER IF FORDI DU TRENGER KUN Å SJEKKE 1 GANG
                 if (rset.next()) {   // Move the cursor to the next row, return false if no more row
@@ -106,8 +108,7 @@ public class StudentMethods {
                     
                     out.println("StudentID: " +idString + "<br> Fornavn: " + firstName + "<br> Etternavn: " + lastName +"<br> Email: "+email+"<br>");
                    
-                   out.format("<br>Moduler:" +"<br>");
-                    
+                   out.format("<br>Moduler:" +"<br>");  
                     
                  }  // end if
                 
@@ -119,12 +120,16 @@ public class StudentMethods {
                    String vurdering = rset.getString("vurdering");
                    String m_id = rset.getString("m_id");
                  
-                  out.println("ModulID: " +m_id+ " Module navn: "+title+" Vurdering: "+vurdering+"<br>");
+                  out.println("ModulID: " +m_id+ " Module navn: "+title+" Vurdering: "+vurdering+"<br></h3>");
+                  
+                  out.println("<center>\n" +
+"            <input type=\"button\" class=\"abutton\" onclick=\"history.back();\" value=\"Tilbake\">\n" +
+"            </center>\n" +
+"            <br>");
                    
                     
                     ++rowCount;
                  }  // end while
-                 out.println("Total number of records = " + rowCount);
          } // end try     
          catch (SQLException ex) {
                 out.println("Ikke hentet fra DB " +ex);

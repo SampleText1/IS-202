@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Khula);
 
 body {
-    background-color: #2C3E50;
+    background-color: #2f3b4c;
     margin: 0 auto;
     width: 40%;
     max-width: 40%;
@@ -11,12 +11,11 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 3px solid #E74C3C;
     padding: 10px; 
 }
 
 h1 {
-    color: #2980B9;
+    color: #eceef2;
     font-family: Khula;
     font-size: 200%;
     letter-spacing: 5px;
@@ -24,28 +23,41 @@ h1 {
 }
 
 h2 {
-    color: #ECF0F1;
+    color: #eceef2;
     font-family: Khula;
     font-size: 120%;
     letter-spacing: 5px;
     text-align: center;
 }
+
+h3 {
+    color: #eceef2;
+    font-size: 85%;
+    font-family: Khula;
+}
+
+h4 {
+    color: #eceef2;
+    font-size: 120%;
+    font-family: Khula;
+}
+
 p  {
-    color: #ECF0F1;
+    color: #ffffff;
     font-family: ABeeZee;
     font-size: 160%;
     padding-left: 30%;
 }
 
 ul {
-    color: #ECF0F1;
+    color: #ffffff;
     font-family: ABeeZee;
     margin: 0 auto;
     width: 50%;
 }
 
 form {
-    color: #ECF0F1;
+    color: #ffffff;
     font-family: ABeeZee;
     margin: 0 auto;
     text-align: center;
@@ -55,7 +67,7 @@ form {
 input {
     font-family: Calibri;
     font-size: 90%;
-    background-color: #ECF0F1;
+    background-color: #ffffff;
     border: 0px;
     text-align: center;
     margin: 0 auto;
@@ -65,16 +77,16 @@ input {
 }
 
 input[type=submit] {
-    background-color: #2980B9;
+    background-color: #f47920;
     border: none;
-    color: #ECF0F1;
+    color: #ffffff;
     vertical-align: middle;
     cursor: pointer;
     border-radius: 4px;
 }
 
 input[type=submit]:hover {
-    background-color: #3498DB;
+    background-color: #F48C40;
     color: white;
 }
 
@@ -85,7 +97,7 @@ input[type=submit]:active {
 .list {
     font-family: ABeeZee;
     font-size: 75%;
-    color: #ECF0F1;
+    color: #ffffff;
     display: block;
     vertical-align: middle;
     margin: 0 auto;
@@ -96,9 +108,9 @@ input[type=submit]:active {
     font-family: Allerta;
     text-align: center;
     text-decoration: none;
-    background-color: #2980B9;
+    background-color: #f47920;
     margin: 0 auto;
-    color: #ECF0F1;
+    color: #ffffff;
     display: inline-block;
     cursor: pointer;
     padding: 20px;
@@ -109,7 +121,7 @@ input[type=submit]:active {
 }
 
 .ibutton:hover {
-   background-color: #3498DB;
+   background-color: #F48C40;
     color: white; 
 }
 
@@ -121,9 +133,9 @@ input[type=submit]:active {
     font-family: Allerta;
     text-align: center;
     text-decoration: none;
-    background-color: #2980B9;
+    background-color: #f47920;
     margin: 0 auto;
-    color: #ECF0F1;
+    color: #ffffff;
     display: inline-block;
     cursor: pointer;
     padding: 20px;
@@ -133,7 +145,7 @@ input[type=submit]:active {
 }
 
 .abutton:hover {
-   background-color: #3498DB;
+   background-color: #F48C40;
     color: white; 
 }
 
@@ -171,4 +183,23 @@ input[type=submit]:active {
         height:0;
         visibility:hidden;
     }
+}
+
+a {
+    color: #f47920;
+    text-decoration: none;
+}
+    
+a:hover {
+    color: #F48C40;
+    text-decoration: underline;
+}
+
+.stulist {
+    font-family: ABeeZee;
+    font-size: 100%;
+    color: #ffffff;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: left;
 }

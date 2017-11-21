@@ -89,12 +89,7 @@ public class ModuleMethods {
                 getStudents.setString(1,id);
                 
                 ResultSet rset = getStudents.executeQuery();
-                out.println("Test for å sjekke at man er i skrivEnModul<br>");    
-                // Step 4: Process the ResultSet by scrolling the cursor forward via next().
-                //  For each row, retrieve the contents of the cells with getXxx(columnName).
-                out.println("The records selected are:" +"<br>");
-                
-                //BRUKER IF FORDI DU TRENGER KUN Å SJEKKE 1 GANG
+                out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">"); 
                
                 while(rset.next()) {   // Move the cursor to the next row, return false if no more row
                     String idString = rset.getString("id");
@@ -102,9 +97,11 @@ public class ModuleMethods {
                     String description   = rset.getString("description");
                     
                     
-                    out.println("StudentID: " +idString + "<br> Fornavn: " + title + "<br> Etternavn: " + description + "<br>");
-                   
-                   out.format("<br>Moduler:" +"<br>");
+                    out.println("<h3>Modul ID: " +idString + "<br> Navn: " + title + "<br> Beskrivelse: " + description + "</h3><br>");
+                    out.println("<center>\n" +
+"            <input type=\"button\" class=\"abutton\" onclick=\"history.back();\" value=\"Tilbake\">\n" +
+"            </center>\n" +
+"            <br>");
                     
                    
                  }  // end if

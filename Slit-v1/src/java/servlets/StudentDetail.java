@@ -38,23 +38,24 @@ public class StudentDetail extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">");
             out.println("<title>Servlet StudentDetail</title>");            
             out.println("</head>");
             out.println("<body>");
             
-             String id  = request.getParameter("id");
+            String id  = request.getParameter("id");
             String firstName = request.getParameter("firstName");
             String ln = request.getParameter("lastName");
             
             
             
-            out.println("<h1>Oversikt over eleven du har valgt:</h1>");
-            out.println("Valgt elev er  " +firstName+ "<br>"); //GIR NULL! FUNGERER IKKE?! Men ID funker.
+            out.println("<h2>Oversikt over eleven du har valgt:</h2>");
+            out.println("<h3>Valgt elev er  " +firstName+ "</h3>"); //GIR NULL! FUNGERER IKKE?! Men ID funker.
             //out.println("Valgt elev er  " +fn+ "" +ln +"<br>"); 
  
             
            // int id2 = Integer.parseInt(id);
-            out.println("StudentID er  " +id+ "<br>");
+            out.println("<h3>StudentID er  " +id+ "</h3>");
             StudentMethods dbCode = new StudentMethods();
             dbCode.Connect(out);
             dbCode.skrivEnStudent(id, out);

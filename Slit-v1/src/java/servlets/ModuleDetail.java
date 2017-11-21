@@ -38,16 +38,16 @@ public class ModuleDetail extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ModuleDetail</title>");            
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">");
+            out.println("<title>Moduldetaljer</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ModuleDetail at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Informasjon om modul</h1>");
             
             String id  = request.getParameter("id");
             String title = request.getParameter("title");
             String description = request.getParameter("description");
             
-            out.println("ModulID er  " +id+ "<br>");
             ModuleMethods dbCode = new ModuleMethods();
             dbCode.Connect(out);
             dbCode.skrivEnModul(id, out);
