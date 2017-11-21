@@ -17,7 +17,7 @@ body {
 h1 {
     color: #eceef2;
     font-family: Khula;
-    font-size: 200%;
+    font-size: 175%;
     letter-spacing: 5px;
     text-align: center;
 }
@@ -188,6 +188,9 @@ input[type=submit]:active {
 a {
     color: #f47920;
     text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 150%;
 }
     
 a:hover {

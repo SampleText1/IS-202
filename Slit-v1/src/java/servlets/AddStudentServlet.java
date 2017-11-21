@@ -43,11 +43,9 @@ public class AddStudentServlet extends HttpServlet {
             out.println("<title>Student lagt til</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Student lagt til</h1>");
-            out.println("<center>\n" +
-"             <a href=\"ansatt.html\" class=\"abutton\">Tilbake</a>\n" +
-"            </center>\n" +
-"            <br>");
+            out.println("<center>");
+            out.println("<h3>Student lagt til</h3>");
+            out.println("</center>");
             out.println("<div class=list>");
             
          String firstName = request.getParameter("firstName");
@@ -64,6 +62,11 @@ public class AddStudentServlet extends HttpServlet {
             rd.forward(request, response); */
            
             out.println("</div>");
+            out.println("<br>");
+            out.println("<center>\n" +
+"            <input type=\"button\" class=\"abutton\" onclick=\"history.back();\" value=\"Tilbake\">\n" +
+"            </center>\n" +
+"            <br>");
             out.println("</body>");
             out.println("</html>");
         }

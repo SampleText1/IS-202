@@ -38,17 +38,6 @@ public class ListStudentsServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Studenter i databasen</h1>");
-            out.println("<center>\n" +
-"            <input type=\"button\" class=\"abutton\" onclick=\"history.back();\" value=\"Tilbake\">\n" +
-"            </center>\n" +
-"            <br>");
-            out.println("<form action=\"deleteStudentServlet\" method=\"post\">\n" +
-"             <p>\n" +
-"             </p>\n" +
-"             <input type=\"text\" name=\"arg2\" placeholder=\"ID\"><br>\n" +
-"              <input type=\"submit\" name=\"hent\" value=\"Slett\">\n" +
-"             </form>" +
-            "<br>");
             out.println("<div class=list>");
            
            
@@ -57,6 +46,17 @@ public class ListStudentsServlet extends HttpServlet {
             dbCode.printStudents(out);
            
             out.println("</div>");
+            out.println("<form action=\"deleteStudentServlet\" method=\"post\">\n" +
+"             <p>\n" +
+"             </p>\n" +
+"             <input type=\"text\" name=\"arg2\" placeholder=\"ID\"><br>\n" +
+"              <input type=\"submit\" name=\"hent\" value=\"Slett\">\n" +
+"             </form>" +
+            "<br>");
+            out.println("<center>\n" +
+"            <input type=\"button\" class=\"abutton\" onclick=\"history.back();\" value=\"Tilbake\">\n" +
+"            </center>\n" +
+"            <br>");
             out.println("</body>");
             out.println("</html>");
         }

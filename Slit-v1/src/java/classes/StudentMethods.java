@@ -53,7 +53,6 @@ public class StudentMethods {
                 
                 ResultSet rset = getStudents.executeQuery();
  
-                out.println("<h4>Oversikt over elevene i emnet:</h4>");
                 int rowCount = 0;
                 while(rset.next()) {   // Move the cursor to the next row, return false if no more row
                     String id = rset.getString("id");
@@ -61,7 +60,6 @@ public class StudentMethods {
                     String lastName   = rset.getString("lastName");
                     out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">");
                     out.println("<div class=stulist>");
-                    out.println("ID: " + id + " - ");
                     out.format(STUDENT, id, lastName, firstName);
                     out.println("</div>");
                     out.println("<br>");
@@ -99,8 +97,7 @@ public class StudentMethods {
                 //  For each row, retrieve the contents of the cells with getXxx(columnName).
                 out.println("<h3>Valgt elev er:" +"<br>");
                 
-                //BRUKER IF FORDI DU TRENGER KUN Å SJEKKE 1 GANG
-                if (rset.next()) {   // Move the cursor to the next row, return false if no more row
+                if (rset.next()) {
                     String idString = rset.getString("s_id");
                     String firstName = rset.getString("firstName");
                     String lastName   = rset.getString("lastName");

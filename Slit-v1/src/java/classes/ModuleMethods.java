@@ -44,7 +44,7 @@ public class ModuleMethods {
    
     public void printModules(PrintWriter out) {
         
-        String STUDENT  = "<li><a href='ModuleDetail?id=%s'>%s</a></li>\n"; 
+        String STUDENT  = "<a href='ModuleDetail?id=%s'>%s</a>\n"; 
                                
         PreparedStatement getModules; 
          
@@ -56,20 +56,16 @@ public class ModuleMethods {
  
                 // Step 4: Process the ResultSet by scrolling the cursor forward via next().
                 //  For each row, retrieve the contents of the cells with getXxx(columnName).
-                out.println("Modulene:" +"<br>");
                 int rowCount = 0;
                 while(rset.next()) {   // Move the cursor to the next row, return false if no more row
-                    out.println("Modul "+ (rowCount +1)+ ":<br>");
                     String id = rset.getString("id");
                     String title = rset.getString("title");
-                    String description   = rset.getString("description");
-                    out.println("ID: " +id + ", Tittel: " + title + ", Beskrivelse: " + description +"<br>");
-                    out.format(STUDENT,id,title); 
-                    out.format("<br>Informasjon:" +"<br>");
+                    out.format(STUDENT,id,title);
+                    out.println("<br>");
                     
                     ++rowCount;
                  }  // end while
-                 out.println("Antall moduler = " + rowCount);
+                 out.println("<br>Antall moduler = " + rowCount);
          } // end try     
          catch (SQLException ex) {
                 out.println("Ikke hentet fra DB " +ex);
@@ -95,9 +91,13 @@ public class ModuleMethods {
                     String idString = rset.getString("id");
                     String title = rset.getString("title");
                     String description   = rset.getString("description");
+                    String goals = rset.getString("goals");
+                    String resources = rset.getString("resources");
+                    String task = rset.getString("task");
+                    String deadline = rset.getString("deadline");
                     
                     
-                    out.println("<h3>Modul ID: " +idString + "<br> Navn: " + title + "<br> Beskrivelse: " + description + "</h3><br>");
+                    out.println("<h3>Navn: " + title + "<br> Beskrivelse: " + description + "<br>Mål: " + goals + "<br>Ressurser: " + resources + "<br>Oppgave: " + task + "<br>Frist: " + deadline +"</h3><br>");
                     out.println("<center>\n" +
 "            <input type=\"button\" class=\"abutton\" onclick=\"history.back();\" value=\"Tilbake\">\n" +
 "            </center>\n" +

@@ -46,21 +46,18 @@ public class StudentDetail extends HttpServlet {
             String id  = request.getParameter("id");
             String firstName = request.getParameter("firstName");
             String ln = request.getParameter("lastName");
-            
-            
-            
+
             out.println("<h2>Oversikt over eleven du har valgt:</h2>");
-            out.println("<h3>Valgt elev er  " +firstName+ "</h3>"); //GIR NULL! FUNGERER IKKE?! Men ID funker.
-            //out.println("Valgt elev er  " +fn+ "" +ln +"<br>"); 
- 
-            
-           // int id2 = Integer.parseInt(id);
             out.println("<h3>StudentID er  " +id+ "</h3>");
             StudentMethods dbCode = new StudentMethods();
             dbCode.Connect(out);
             dbCode.skrivEnStudent(id, out);
             //dbCode.close();
             
+            out.println("<center>\n" +
+"             <input type=\"button\" class=\"abutton\" onclick=\"history.back();\" value=\"Tilbake\">\n" +
+"            </center>\n" +
+"            <br>");
             out.println("</body>");
             out.println("</html>");
         }

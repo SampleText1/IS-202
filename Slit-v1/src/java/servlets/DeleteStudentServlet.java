@@ -40,10 +40,9 @@ public class DeleteStudentServlet extends HttpServlet {
             out.println("<html>");
             out.println("<head>");
             out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">");
-            out.println("<title>fakk deleteStudentServlet</title>");            
+            out.println("<title>Student slettet</title>");            
             out.println("</head>");
             out.println("<body>");
-            
             out.println("<center>\n" +
 "             <input type=\"button\" class=\"abutton\" onclick=\"history.back();\" value=\"Tilbake\">\n" +
 "            </center>\n" +
@@ -64,8 +63,6 @@ public class DeleteStudentServlet extends HttpServlet {
          
             
             out.println("<h2>Student med " +arg2 + " som ID slettet</h2>");
-           
-            
             
             out.println("</body>");
             out.println("</html>");

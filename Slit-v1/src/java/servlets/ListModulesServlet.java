@@ -38,10 +38,6 @@ public class ListModulesServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Moduler i databasen</h1>");
-            out.println("<center>\n" +
-"             <input type=\"button\" class=\"abutton\" onclick=\"history.back();\" value=\"Tilbake\">\n" +
-"            </center>\n" +
-"            <br>");
             out.println("<div class=list>");
            
            
@@ -50,6 +46,10 @@ public class ListModulesServlet extends HttpServlet {
             dbCode.printModules(out);
            
             out.println("</div>");
+            out.println("<br><center>\n" +
+"             <input type=\"button\" class=\"abutton\" onclick=\"history.back();\" value=\"Tilbake\">\n" +
+"            </center>\n" +
+"            <br>");
             out.println("</body>");
             out.println("</html>");
         }
