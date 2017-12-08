@@ -7,6 +7,12 @@ import javax.servlet.annotation.WebServlet;
 
 @WebServlet(name = "login", urlPatterns = {"/login"})
 public class Login extends HttpServlet {
+    
+    Validate Val;
+
+    public Login() {
+        this.Val = new Validate();
+    }
  
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -16,12 +22,12 @@ public class Login extends HttpServlet {
         String email = request.getParameter("email");
         String pass = request.getParameter("pass");
         
-        if(Validate.checkAdmin(email, pass))
+        if(Val.checkAdmin(email, pass))
         {
             RequestDispatcher rs = request.getRequestDispatcher("ansatt.html");
             rs.forward(request, response);
         }
-        else if(Validate.checkUser(email, pass))
+        else if(Val.checkUser(email, pass))
         {
             RequestDispatcher rs = request.getRequestDispatcher("student.html");
             rs.forward(request, response);
