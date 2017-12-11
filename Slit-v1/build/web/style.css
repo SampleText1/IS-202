@@ -1,0 +1,211 @@
+@import url(https://fonts.googleapis.com/css?family=ABeeZee);
+@import url(https://fonts.googleapis.com/css?family=Allerta);
+@import url(https://fonts.googleapis.com/css?family=Khula);
+
+body {
+    background-color: #2f3b4c;
+    margin: 0 auto;
+    width: 40%;
+    max-width: 40%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px; 
+}
+
+h1 {
+    color: #eceef2;
+    font-family: Khula;
+    font-size: 175%;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+h2 {
+    color: #eceef2;
+    font-family: Khula;
+    font-size: 120%;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+h3 {
+    color: #eceef2;
+    font-size: 85%;
+    font-family: Khula;
+}
+
+h4 {
+    color: #eceef2;
+    font-size: 120%;
+    font-family: Khula;
+}
+
+p  {
+    color: #ffffff;
+    font-family: ABeeZee;
+    font-size: 160%;
+    padding-left: 30%;
+}
+
+ul {
+    color: #ffffff;
+    font-family: ABeeZee;
+    margin: 0 auto;
+    width: 50%;
+}
+
+form {
+    font-family: ABeeZee;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px 0 0 0;
+}
+
+input {
+    font-family: Calibri;
+    font-size: 90%;
+    background-color: #ffffff;
+    border: 0px;
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+
+input[type=submit] {
+    background-color: #f47920;
+    border: none;
+    color: #ffffff;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+input[type=submit]:hover {
+    background-color: #F48C40;
+    color: white;
+}
+
+input[type=submit]:active {
+    transform: translateY(0.5px);
+}
+
+input[type=file] {
+    position: relative;
+}
+
+.list {
+    font-family: ABeeZee;
+    font-size: 75%;
+    color: #ffffff;
+    display: block;
+    vertical-align: middle;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ibutton {
+    font-family: Allerta;
+    text-align: center;
+    text-decoration: none;
+    background-color: #f47920;
+    margin: 0 auto;
+    color: #ffffff;
+    display: inline-block;
+    cursor: pointer;
+    padding: 20px;
+    width: 200px;
+    max-width: 100%;
+    border-radius: 4px;
+    
+}
+
+.ibutton:hover {
+   background-color: #F48C40;
+    color: white; 
+}
+
+.ibutton:active {
+    transform: translateY(0.5px);
+}
+
+.abutton {
+    font-family: Allerta;
+    text-align: center;
+    text-decoration: none;
+    background-color: #f47920;
+    margin: 0 auto;
+    color: #ffffff;
+    display: inline-block;
+    cursor: pointer;
+    padding: 20px;
+    width: 100px;
+    border-radius: 4px;
+    
+}
+
+.abutton:hover {
+   background-color: #F48C40;
+    color: white; 
+}
+
+.abutton:active {
+    transform: translateY(0.5px);
+}
+
+.alert {
+    font-family: Allerta;
+    color: white;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -moz-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 5s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
+
+a {
+    color: #f47920;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 150%;
+}
+    
+a:hover {
+    color: #F48C40;
+    text-decoration: underline;
+}
+
+.stulist {
+    font-family: ABeeZee;
+    font-size: 100%;
+    color: #ffffff;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: left;
+}
