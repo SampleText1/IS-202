@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import classes.UploadMethods;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import lib.DbConnection;
  
 @WebServlet("/uploadServlet")
@@ -51,7 +52,13 @@ public class UploadServlet extends HttpServlet {
             request.setAttribute("Message", message);
              
             // forwards to the message page
-            getServletContext().getRequestDispatcher("/index.html").forward(request, response);
+           
+             {
+  
+           out.println("<div class=alert>Fil lastet opp</div>");
+           RequestDispatcher rs = request.getRequestDispatcher("upload.html");
+           rs.include(request, response);
+        }
         }
     }
 }
