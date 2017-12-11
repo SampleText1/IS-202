@@ -7,13 +7,13 @@
 <body>
     <center>
         <h1>Last opp fil</h1>
-        <form method="post" action="uploadServlet" enctype="multipart/form-data">
+        <form action="uploadToDB" method="post" enctype="multipart/form-data">
                     <input type="text" name="first_name" placeholder="Fornavn"/>
                     <br>
                     <input type="text" name="last_name" placeholder="Etternavn"/>
                     <br>
-                    <input type="file" name="photo" size="50"/>
-                    <input type="submit" value="Last opp">             
+                    <input type="file" name="photo">
+                    <input type="submit" value="Last opp">           
         </form>
          <form action="student.html" method="post">
              <input type="Submit" name="hent" value="Tilbake">

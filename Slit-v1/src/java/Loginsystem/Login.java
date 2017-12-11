@@ -39,5 +39,14 @@ public class Login extends HttpServlet {
            RequestDispatcher rs = request.getRequestDispatcher("index.html");
            rs.include(request, response);
         }
-    }  
+    }
+    
+    /* public void session(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        String str = request.getParameter("email");
+        
+        HttpSession session = request.getSession();
+        session.setAttribute("email", str);
+    } */
 }
