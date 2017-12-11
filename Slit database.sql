@@ -20,6 +20,14 @@ create table modules(
     deadline date
 );
 
+CREATE TABLE uploads (
+  contact_id int(11) NOT NULL AUTO_INCREMENT,
+  first_name varchar(45) DEFAULT NULL,
+  last_name varchar(45) DEFAULT NULL,
+  photo mediumblob,
+  PRIMARY KEY (contact_id)
+);
+
 insert into useraccount(id, firstname)
 values(1, 'Marius');
 
