@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import classes.UploadMethods;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import lib.DbConnection;
  
 @WebServlet("/uploadServlet")
@@ -20,15 +21,16 @@ public class UploadServlet extends HttpServlet {
      
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
-         try (PrintWriter out = response.getWriter()) {
+        try (PrintWriter out = response.getWriter()) {
         // gets values of text fields
         String first_name = request.getParameter("first_name");
         String last_name = request.getParameter("last_name");
          
         InputStream inputStream = null; // input stream of the upload file
-         
+        
         // obtains the upload file part in this multipart request
         Part filePart = request.getPart("photo");
+        
         if (filePart != null) {
             // prints out some information for debugging
             System.out.println(filePart.getName());
@@ -38,6 +40,7 @@ public class UploadServlet extends HttpServlet {
             // obtains input stream of the upload file
             inputStream = filePart.getInputStream();
         }
+        
         UploadMethods um = new UploadMethods(); 
             DbConnection db = new DbConnection();
             db.Connect();
@@ -51,7 +54,13 @@ public class UploadServlet extends HttpServlet {
             request.setAttribute("Message", message);
              
             // forwards to the message page
-            getServletContext().getRequestDispatcher("/index.html").forward(request, response);
+           
+             {
+  
+           out.println("<div class=alert>Fil lastet opp</div>");
+           RequestDispatcher rs = request.getRequestDispatcher("upload.html");
+           rs.include(request, response);
+        }
         }
     }
 }
