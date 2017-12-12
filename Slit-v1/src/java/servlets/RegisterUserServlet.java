@@ -35,7 +35,7 @@ public class RegisterUserServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             
-           // Fetches parameters from the Html file
+           // Fetches parameters from the Html file.
          String FirstName = request.getParameter("firstName");
          String LastName = request.getParameter("lastName");
          String pass = request.getParameter("pass");
