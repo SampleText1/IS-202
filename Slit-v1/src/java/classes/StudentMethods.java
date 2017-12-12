@@ -6,7 +6,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Properties;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -29,6 +32,7 @@ public class StudentMethods {
          DataSource ds = (DataSource)cont.lookup("java:comp/env/jdbc/LocalhostDS"); //
          //DataSource ds = (DataSource)cont.lookup("jdbc/LocalhostDS");
          conn =  ds.getConnection();  //Kobler seg til.
+         
  
          // Step 2: Allocate a 'Statement' object in the Connection
          stmt = conn.createStatement();
@@ -199,11 +203,21 @@ public class StudentMethods {
    
     public void addUser(String firstName, String lastName, String pass, String email, PrintWriter out){
        
-        //name = name;
-        Calendar now = Calendar.getInstance();
-             int year = now.get(Calendar.YEAR);
-             String yearInString = String.valueOf(year);
-        email = firstName + yearInString + "@uia.no";
+         Properties props = new Properties();
+         props.put("charSet", "cp1252");
+        
+        DateFormat df = new SimpleDateFormat("yy"); // Just the year, with 2 digits
+        String yearInString = df.format(Calendar.getInstance().getTime());
+             
+        String firstNamemax = firstName;   
+        int maxLengthF = (firstNamemax.length() < 4)?firstNamemax.length():4;
+        firstNamemax = firstNamemax.substring(0, maxLengthF);  
+        
+        String lastNamemax = lastName;   
+        int maxLengthL = (lastNamemax.length() < 1)?lastNamemax.length():1;
+        lastNamemax = lastNamemax.substring(0, maxLengthL);  
+        
+        email = firstNamemax.toLowerCase() + lastNamemax.toLowerCase() + yearInString + "@uia.no";
         String strSelect3 = ("insert into userAccount(firstName, lastName, pass, email) values('"+firstName+"' , '"+lastName+"' , '"+pass+"' , '"+email+"');");
         
         // System.out.println("The SQL query is: " + strSelect2);
