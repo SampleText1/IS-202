@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.projectimport.eclipse.j2se">
+    <module_version install_time="1475191529832" last="true" origin="installer" specification_version="1.28.1.48">
+        <file crc="745553176" name="config/Modules/org-netbeans-modules-projectimport-eclipse-j2se.xml"/>
+        <file crc="31486074" name="modules/locale/org-netbeans-modules-projectimport-eclipse-j2se_ja.jar"/>
+        <file crc="2187721671" name="modules/locale/org-netbeans-modules-projectimport-eclipse-j2se_pt_BR.jar"/>
+        <file crc="3346937837" name="modules/locale/org-netbeans-modules-projectimport-eclipse-j2se_ru.jar"/>
+        <file crc="509352521" name="modules/locale/org-netbeans-modules-projectimport-eclipse-j2se_zh_CN.jar"/>
+        <file crc="2132812780" name="modules/org-netbeans-modules-projectimport-eclipse-j2se.jar"/>
+    </module_version>
+</module>

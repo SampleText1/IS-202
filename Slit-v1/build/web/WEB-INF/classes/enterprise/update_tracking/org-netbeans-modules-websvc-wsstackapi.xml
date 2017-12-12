@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.websvc.wsstackapi/0">
+    <module_version install_time="1475191673560" last="true" origin="installer" specification_version="1.26.1">
+        <file crc="1026899591" name="config/Modules/org-netbeans-modules-websvc-wsstackapi.xml"/>
+        <file crc="1115130839" name="modules/locale/org-netbeans-modules-websvc-wsstackapi_ja.jar"/>
+        <file crc="2918723172" name="modules/locale/org-netbeans-modules-websvc-wsstackapi_pt_BR.jar"/>
+        <file crc="1814107580" name="modules/locale/org-netbeans-modules-websvc-wsstackapi_ru.jar"/>
+        <file crc="2065758913" name="modules/locale/org-netbeans-modules-websvc-wsstackapi_zh_CN.jar"/>
+        <file crc="100521300" name="modules/org-netbeans-modules-websvc-wsstackapi.jar"/>
+    </module_version>
+</module>

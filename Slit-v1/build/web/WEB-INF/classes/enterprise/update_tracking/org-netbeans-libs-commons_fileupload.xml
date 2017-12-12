@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.libs.commons_fileupload/1">
+    <module_version install_time="1475191817492" last="true" origin="installer" specification_version="1.28.1">
+        <file crc="487567908" name="config/Modules/org-netbeans-libs-commons_fileupload.xml"/>
+        <file crc="1699899312" name="modules/ext/commons-fileupload-1.3.jar"/>
+        <file crc="1060811010" name="modules/locale/org-netbeans-libs-commons_fileupload_ja.jar"/>
+        <file crc="3202162530" name="modules/locale/org-netbeans-libs-commons_fileupload_pt_BR.jar"/>
+        <file crc="3647874972" name="modules/locale/org-netbeans-libs-commons_fileupload_ru.jar"/>
+        <file crc="1231748872" name="modules/locale/org-netbeans-libs-commons_fileupload_zh_CN.jar"/>
+        <file crc="3559598938" name="modules/org-netbeans-libs-commons_fileupload.jar"/>
+    </module_version>
+</module>

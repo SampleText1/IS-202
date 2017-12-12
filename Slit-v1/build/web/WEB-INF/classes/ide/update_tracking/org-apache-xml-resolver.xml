@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.apache.xml.resolver">
+    <module_version install_time="1475191183961" last="true" origin="installer" specification_version="1.31.1.12">
+        <file crc="3464639154" name="config/Modules/org-apache-xml-resolver.xml"/>
+        <file crc="1712408665" name="modules/ext/resolver-1.2.jar"/>
+        <file crc="2331314658" name="modules/locale/org-apache-xml-resolver_ja.jar"/>
+        <file crc="156293027" name="modules/locale/org-apache-xml-resolver_pt_BR.jar"/>
+        <file crc="1710702202" name="modules/locale/org-apache-xml-resolver_ru.jar"/>
+        <file crc="2959545786" name="modules/locale/org-apache-xml-resolver_zh_CN.jar"/>
+        <file crc="1179950539" name="modules/org-apache-xml-resolver.jar"/>
+    </module_version>
+</module>

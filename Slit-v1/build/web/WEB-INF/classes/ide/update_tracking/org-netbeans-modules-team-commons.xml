@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.team.commons">
+    <module_version install_time="1475191130414" last="true" origin="installer" specification_version="1.50.1">
+        <file crc="3477206803" name="config/Modules/org-netbeans-modules-team-commons.xml"/>
+        <file crc="9833206" name="modules/locale/org-netbeans-modules-team-commons_ja.jar"/>
+        <file crc="3185876264" name="modules/locale/org-netbeans-modules-team-commons_pt_BR.jar"/>
+        <file crc="2006101392" name="modules/locale/org-netbeans-modules-team-commons_ru.jar"/>
+        <file crc="2160178339" name="modules/locale/org-netbeans-modules-team-commons_zh_CN.jar"/>
+        <file crc="754051317" name="modules/org-netbeans-modules-team-commons.jar"/>
+    </module_version>
+</module>

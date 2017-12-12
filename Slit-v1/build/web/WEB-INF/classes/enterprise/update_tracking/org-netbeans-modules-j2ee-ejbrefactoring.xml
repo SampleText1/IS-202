@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.j2ee.ejbrefactoring">
+    <module_version install_time="1475191745792" last="true" origin="installer" specification_version="1.28.1">
+        <file crc="2261657527" name="config/Modules/org-netbeans-modules-j2ee-ejbrefactoring.xml"/>
+        <file crc="1033801534" name="modules/locale/org-netbeans-modules-j2ee-ejbrefactoring_ja.jar"/>
+        <file crc="653240850" name="modules/locale/org-netbeans-modules-j2ee-ejbrefactoring_pt_BR.jar"/>
+        <file crc="2209635890" name="modules/locale/org-netbeans-modules-j2ee-ejbrefactoring_ru.jar"/>
+        <file crc="3884402089" name="modules/locale/org-netbeans-modules-j2ee-ejbrefactoring_zh_CN.jar"/>
+        <file crc="2857812096" name="modules/org-netbeans-modules-j2ee-ejbrefactoring.jar"/>
+    </module_version>
+</module>

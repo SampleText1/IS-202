@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.maven.indexer/2">
+    <module_version install_time="1475191405138" last="true" origin="installer" specification_version="2.38.1">
+        <file crc="3741439804" name="config/Modules/org-netbeans-modules-maven-indexer.xml"/>
+        <file crc="3654406671" name="modules/ext/maven/indexer-artifact-5.1.1.jar"/>
+        <file crc="409685631" name="modules/ext/maven/indexer-core-5.1.1-patched.jar"/>
+        <file crc="4084421374" name="modules/ext/maven/lucene-core-3.6.2.jar"/>
+        <file crc="3234158159" name="modules/ext/maven/lucene-highlighter-3.6.2.jar"/>
+        <file crc="743581335" name="modules/locale/org-netbeans-modules-maven-indexer_ja.jar"/>
+        <file crc="1261623774" name="modules/locale/org-netbeans-modules-maven-indexer_pt_BR.jar"/>
+        <file crc="3534887448" name="modules/locale/org-netbeans-modules-maven-indexer_ru.jar"/>
+        <file crc="3634350477" name="modules/locale/org-netbeans-modules-maven-indexer_zh_CN.jar"/>
+        <file crc="2693738382" name="modules/org-netbeans-modules-maven-indexer.jar"/>
+    </module_version>
+</module>

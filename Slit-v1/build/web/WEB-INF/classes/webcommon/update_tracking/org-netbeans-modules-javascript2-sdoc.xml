@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javascript2.sdoc">
+    <module_version install_time="1475191634129" last="true" origin="installer" specification_version="1.0.1">
+        <file crc="3212451924" name="config/Modules/org-netbeans-modules-javascript2-sdoc.xml"/>
+        <file crc="896527909" name="modules/locale/org-netbeans-modules-javascript2-sdoc_ja.jar"/>
+        <file crc="4101734386" name="modules/locale/org-netbeans-modules-javascript2-sdoc_pt_BR.jar"/>
+        <file crc="2167834603" name="modules/locale/org-netbeans-modules-javascript2-sdoc_ru.jar"/>
+        <file crc="779270515" name="modules/locale/org-netbeans-modules-javascript2-sdoc_zh_CN.jar"/>
+        <file crc="4040758286" name="modules/org-netbeans-modules-javascript2-sdoc.jar"/>
+    </module_version>
+</module>

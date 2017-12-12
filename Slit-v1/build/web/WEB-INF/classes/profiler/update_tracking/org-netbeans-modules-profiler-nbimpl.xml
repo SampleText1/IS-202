@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.profiler.nbimpl/1">
+    <module_version install_time="1475191590697" last="true" origin="installer" specification_version="1.25.1">
+        <file crc="1359449228" name="ant/nblib/org-netbeans-modules-profiler-nbimpl.jar"/>
+        <file crc="843527244" name="config/Modules/org-netbeans-modules-profiler-nbimpl.xml"/>
+        <file crc="717369430" name="modules/locale/org-netbeans-modules-profiler-nbimpl_ja.jar"/>
+        <file crc="3525717356" name="modules/locale/org-netbeans-modules-profiler-nbimpl_pt_BR.jar"/>
+        <file crc="2918960880" name="modules/locale/org-netbeans-modules-profiler-nbimpl_ru.jar"/>
+        <file crc="2738434971" name="modules/locale/org-netbeans-modules-profiler-nbimpl_zh_CN.jar"/>
+        <file crc="2549658871" name="modules/org-netbeans-modules-profiler-nbimpl.jar"/>
+    </module_version>
+</module>

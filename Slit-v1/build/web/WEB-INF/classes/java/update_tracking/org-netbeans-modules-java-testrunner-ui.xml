@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.java.testrunner.ui">
+    <module_version install_time="1475191507573" last="true" origin="installer" specification_version="1.4.1">
+        <file crc="842956287" name="config/Modules/org-netbeans-modules-java-testrunner-ui.xml"/>
+        <file crc="165533051" name="modules/locale/org-netbeans-modules-java-testrunner-ui_ja.jar"/>
+        <file crc="986263046" name="modules/locale/org-netbeans-modules-java-testrunner-ui_pt_BR.jar"/>
+        <file crc="480539505" name="modules/locale/org-netbeans-modules-java-testrunner-ui_ru.jar"/>
+        <file crc="3346606549" name="modules/locale/org-netbeans-modules-java-testrunner-ui_zh_CN.jar"/>
+        <file crc="3159847185" name="modules/org-netbeans-modules-java-testrunner-ui.jar"/>
+    </module_version>
+</module>

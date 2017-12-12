@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.editor.search">
+    <module_version install_time="1475191213893" last="true" origin="installer" specification_version="1.25.1.0.55">
+        <file crc="4056457626" name="config/Modules/org-netbeans-modules-editor-search.xml"/>
+        <file crc="3659924099" name="modules/locale/org-netbeans-modules-editor-search_ja.jar"/>
+        <file crc="2575324583" name="modules/locale/org-netbeans-modules-editor-search_pt_BR.jar"/>
+        <file crc="2082210544" name="modules/locale/org-netbeans-modules-editor-search_ru.jar"/>
+        <file crc="792613025" name="modules/locale/org-netbeans-modules-editor-search_zh_CN.jar"/>
+        <file crc="2658812194" name="modules/org-netbeans-modules-editor-search.jar"/>
+    </module_version>
+</module>

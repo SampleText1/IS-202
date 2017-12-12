@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.versioning.ui/1">
+    <module_version install_time="1475191240430" last="true" origin="installer" specification_version="1.22.1.42.1">
+        <file crc="2449584977" name="config/Modules/org-netbeans-modules-versioning-ui.xml"/>
+        <file crc="611820392" name="modules/locale/org-netbeans-modules-versioning-ui_ja.jar"/>
+        <file crc="922047958" name="modules/locale/org-netbeans-modules-versioning-ui_pt_BR.jar"/>
+        <file crc="3408445913" name="modules/locale/org-netbeans-modules-versioning-ui_ru.jar"/>
+        <file crc="1167822455" name="modules/locale/org-netbeans-modules-versioning-ui_zh_CN.jar"/>
+        <file crc="81650832" name="modules/org-netbeans-modules-versioning-ui.jar"/>
+    </module_version>
+</module>

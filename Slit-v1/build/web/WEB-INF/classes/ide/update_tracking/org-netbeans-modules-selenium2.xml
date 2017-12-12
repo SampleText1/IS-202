@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.selenium2">
+    <module_version install_time="1475191261420" last="true" origin="installer" specification_version="1.5.1">
+        <file crc="2189509836" name="config/Modules/org-netbeans-modules-selenium2.xml"/>
+        <file crc="255471616" name="modules/locale/org-netbeans-modules-selenium2_ja.jar"/>
+        <file crc="3837400230" name="modules/locale/org-netbeans-modules-selenium2_pt_BR.jar"/>
+        <file crc="403864591" name="modules/locale/org-netbeans-modules-selenium2_ru.jar"/>
+        <file crc="1554538074" name="modules/locale/org-netbeans-modules-selenium2_zh_CN.jar"/>
+        <file crc="275559523" name="modules/org-netbeans-modules-selenium2.jar"/>
+    </module_version>
+</module>

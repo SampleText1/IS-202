@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.jdesktop.beansbinding/1">
+    <module_version install_time="1475191389688" last="true" origin="installer" specification_version="1.27.1.121">
+        <file crc="3832461749" name="config/Modules/org-jdesktop-beansbinding.xml"/>
+        <file crc="66307609" name="docs/beansbinding-1.2.1-doc.zip"/>
+        <file crc="1361364200" name="modules/ext/beansbinding-1.2.1.jar"/>
+        <file crc="2618578409" name="modules/locale/org-jdesktop-beansbinding_ja.jar"/>
+        <file crc="3358101810" name="modules/locale/org-jdesktop-beansbinding_pt_BR.jar"/>
+        <file crc="1126723905" name="modules/locale/org-jdesktop-beansbinding_ru.jar"/>
+        <file crc="3300027034" name="modules/locale/org-jdesktop-beansbinding_zh_CN.jar"/>
+        <file crc="755087469" name="modules/org-jdesktop-beansbinding.jar"/>
+    </module_version>
+</module>

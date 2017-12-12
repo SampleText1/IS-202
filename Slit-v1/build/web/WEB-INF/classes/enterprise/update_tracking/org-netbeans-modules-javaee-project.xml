@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javaee.project">
+    <module_version install_time="1475191723942" last="true" origin="installer" specification_version="1.21.1">
+        <file crc="3492940449" name="config/Modules/org-netbeans-modules-javaee-project.xml"/>
+        <file crc="413631134" name="modules/locale/org-netbeans-modules-javaee-project_ja.jar"/>
+        <file crc="105785969" name="modules/locale/org-netbeans-modules-javaee-project_pt_BR.jar"/>
+        <file crc="3891144166" name="modules/locale/org-netbeans-modules-javaee-project_ru.jar"/>
+        <file crc="1144490120" name="modules/locale/org-netbeans-modules-javaee-project_zh_CN.jar"/>
+        <file crc="3475957797" name="modules/org-netbeans-modules-javaee-project.jar"/>
+    </module_version>
+</module>

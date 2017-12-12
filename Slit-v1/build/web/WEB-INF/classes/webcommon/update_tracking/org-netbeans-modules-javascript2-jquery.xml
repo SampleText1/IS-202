@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javascript2.jquery">
+    <module_version install_time="1475191631303" last="true" origin="installer" specification_version="1.11.1">
+        <file crc="520119103" name="config/Modules/org-netbeans-modules-javascript2-jquery.xml"/>
+        <file crc="4021727325" name="docs/jquery-api.xml"/>
+        <file crc="1472864061" name="docs/jquery-propertyNames.xml"/>
+        <file crc="965868389" name="modules/locale/org-netbeans-modules-javascript2-jquery_ja.jar"/>
+        <file crc="379159123" name="modules/locale/org-netbeans-modules-javascript2-jquery_pt_BR.jar"/>
+        <file crc="1232728940" name="modules/locale/org-netbeans-modules-javascript2-jquery_ru.jar"/>
+        <file crc="2541779128" name="modules/locale/org-netbeans-modules-javascript2-jquery_zh_CN.jar"/>
+        <file crc="1673447131" name="modules/org-netbeans-modules-javascript2-jquery.jar"/>
+    </module_version>
+</module>

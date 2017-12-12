@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.profiler.attach/2">
+    <module_version install_time="1475191581937" last="true" origin="installer" specification_version="2.21.1">
+        <file crc="765631516" name="config/Modules/org-netbeans-modules-profiler-attach.xml"/>
+        <file crc="1297352436" name="modules/locale/org-netbeans-modules-profiler-attach_ja.jar"/>
+        <file crc="2411313978" name="modules/locale/org-netbeans-modules-profiler-attach_pt_BR.jar"/>
+        <file crc="2909889441" name="modules/locale/org-netbeans-modules-profiler-attach_ru.jar"/>
+        <file crc="415843127" name="modules/locale/org-netbeans-modules-profiler-attach_zh_CN.jar"/>
+        <file crc="2394975731" name="modules/org-netbeans-modules-profiler-attach.jar"/>
+    </module_version>
+</module>

@@ -8,17 +8,16 @@
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <web-module-libraries>
                 <library dirs="200">
-                    <file>${file.reference.javaee-api-7.0-1.jar-1}</file>
-                    <path-in-war>WEB-INF/lib</path-in-war>
+                    <file>${file.reference.javaee-api-7.0-1.jar}</file>
                 </library>
                 <library dirs="200">
-                    <file>${file.reference.servlet-api.jar-1}</file>
-                    <path-in-war>WEB-INF/lib</path-in-war>
+                    <file>${file.reference.servlet-api.jar}</file>
                 </library>
             </web-module-libraries>
             <web-module-additional-libraries/>
             <source-roots>
                 <root id="src.dir"/>
+                <root id="src.netbeans.dir"/>
             </source-roots>
             <test-roots>
                 <root id="test.src.dir"/>

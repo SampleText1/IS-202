@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.api.maven">
+    <module_version install_time="1475191412218" last="true" origin="installer" specification_version="1.4.1">
+        <file crc="198060656" name="config/Modules/org-netbeans-api-maven.xml"/>
+        <file crc="451601935" name="modules/locale/org-netbeans-api-maven_ja.jar"/>
+        <file crc="1459522114" name="modules/locale/org-netbeans-api-maven_pt_BR.jar"/>
+        <file crc="1423557566" name="modules/locale/org-netbeans-api-maven_ru.jar"/>
+        <file crc="2119886792" name="modules/locale/org-netbeans-api-maven_zh_CN.jar"/>
+        <file crc="266210209" name="modules/org-netbeans-api-maven.jar"/>
+    </module_version>
+</module>

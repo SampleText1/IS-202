@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.performance.javaee">
+    <module_version install_time="1475191831248" last="true" origin="installer" specification_version="1.6.1">
+        <file crc="30513350" name="config/Modules/org-netbeans-modules-performance-javaee.xml"/>
+        <file crc="2289993313" name="modules/locale/org-netbeans-modules-performance-javaee_ja.jar"/>
+        <file crc="2804839202" name="modules/locale/org-netbeans-modules-performance-javaee_pt_BR.jar"/>
+        <file crc="1029677568" name="modules/locale/org-netbeans-modules-performance-javaee_ru.jar"/>
+        <file crc="2985145347" name="modules/locale/org-netbeans-modules-performance-javaee_zh_CN.jar"/>
+        <file crc="2726170244" name="modules/org-netbeans-modules-performance-javaee.jar"/>
+    </module_version>
+</module>

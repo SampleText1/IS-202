@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.websvc.clientapi">
+    <module_version install_time="1475191727416" last="true" origin="installer" specification_version="1.35.1">
+        <file crc="1364666903" name="config/Modules/org-netbeans-modules-websvc-clientapi.xml"/>
+        <file crc="300139171" name="modules/locale/org-netbeans-modules-websvc-clientapi_ja.jar"/>
+        <file crc="1239580706" name="modules/locale/org-netbeans-modules-websvc-clientapi_pt_BR.jar"/>
+        <file crc="832032633" name="modules/locale/org-netbeans-modules-websvc-clientapi_ru.jar"/>
+        <file crc="1373591463" name="modules/locale/org-netbeans-modules-websvc-clientapi_zh_CN.jar"/>
+        <file crc="2057961216" name="modules/org-netbeans-modules-websvc-clientapi.jar"/>
+    </module_version>
+</module>

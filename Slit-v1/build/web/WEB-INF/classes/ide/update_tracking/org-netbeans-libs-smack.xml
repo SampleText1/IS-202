@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.libs.smack">
+    <module_version install_time="1475191238632" last="true" origin="installer" specification_version="3.26.1">
+        <file crc="4211211357" name="config/Modules/org-netbeans-libs-smack.xml"/>
+        <file crc="1934265467" name="modules/ext/smack.jar"/>
+        <file crc="1008555213" name="modules/ext/smackx.jar"/>
+        <file crc="912696922" name="modules/locale/org-netbeans-libs-smack_ja.jar"/>
+        <file crc="2293043151" name="modules/locale/org-netbeans-libs-smack_pt_BR.jar"/>
+        <file crc="620869" name="modules/locale/org-netbeans-libs-smack_ru.jar"/>
+        <file crc="1321521643" name="modules/locale/org-netbeans-libs-smack_zh_CN.jar"/>
+        <file crc="331149854" name="modules/org-netbeans-libs-smack.jar"/>
+    </module_version>
+</module>

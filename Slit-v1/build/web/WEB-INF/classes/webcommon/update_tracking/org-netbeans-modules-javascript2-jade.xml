@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javascript2.jade/1">
+    <module_version install_time="1475191630684" last="true" origin="installer" specification_version="0.8.1">
+        <file crc="2288655960" name="config/Modules/org-netbeans-modules-javascript2-jade.xml"/>
+        <file crc="1186782346" name="modules/locale/org-netbeans-modules-javascript2-jade_ja.jar"/>
+        <file crc="3005937056" name="modules/locale/org-netbeans-modules-javascript2-jade_pt_BR.jar"/>
+        <file crc="4053333505" name="modules/locale/org-netbeans-modules-javascript2-jade_ru.jar"/>
+        <file crc="3852025641" name="modules/locale/org-netbeans-modules-javascript2-jade_zh_CN.jar"/>
+        <file crc="621211932" name="modules/org-netbeans-modules-javascript2-jade.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.web.common">
+    <module_version install_time="1475191162560" last="true" origin="installer" specification_version="1.98.1">
+        <file crc="842111795" name="config/Modules/org-netbeans-modules-web-common.xml"/>
+        <file crc="3217045807" name="modules/locale/org-netbeans-modules-web-common_ja.jar"/>
+        <file crc="2449440838" name="modules/locale/org-netbeans-modules-web-common_pt_BR.jar"/>
+        <file crc="727068640" name="modules/locale/org-netbeans-modules-web-common_ru.jar"/>
+        <file crc="3464248235" name="modules/locale/org-netbeans-modules-web-common_zh_CN.jar"/>
+        <file crc="1342710940" name="modules/org-netbeans-modules-web-common.jar"/>
+    </module_version>
+</module>

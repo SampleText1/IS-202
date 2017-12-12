@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.lib.profiler.common/1">
+    <module_version install_time="1475191577536" last="true" origin="installer" specification_version="1.46.1">
+        <file crc="2844787612" name="config/Modules/org-netbeans-lib-profiler-common.xml"/>
+        <file crc="880174960" name="modules/locale/org-netbeans-lib-profiler-common_ja.jar"/>
+        <file crc="3466769468" name="modules/locale/org-netbeans-lib-profiler-common_pt_BR.jar"/>
+        <file crc="1051859786" name="modules/locale/org-netbeans-lib-profiler-common_ru.jar"/>
+        <file crc="3609444618" name="modules/locale/org-netbeans-lib-profiler-common_zh_CN.jar"/>
+        <file crc="2389575190" name="modules/org-netbeans-lib-profiler-common.jar"/>
+    </module_version>
+</module>

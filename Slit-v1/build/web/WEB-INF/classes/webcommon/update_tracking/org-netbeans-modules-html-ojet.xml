@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.html.ojet">
+    <module_version install_time="1475191617729" last="true" origin="installer" specification_version="0.10.1">
+        <file crc="1662159117" name="config/Modules/org-netbeans-modules-html-ojet.xml"/>
+        <file crc="4248944433" name="docs/ojetdocs-1_0_0.zip"/>
+        <file crc="1311837371" name="docs/ojetdocs-1_1_2.zip"/>
+        <file crc="806378226" name="docs/ojetdocs-2_0_0.zip"/>
+        <file crc="1946801712" name="modules/locale/org-netbeans-modules-html-ojet_ja.jar"/>
+        <file crc="2817489165" name="modules/locale/org-netbeans-modules-html-ojet_pt_BR.jar"/>
+        <file crc="1580696086" name="modules/locale/org-netbeans-modules-html-ojet_ru.jar"/>
+        <file crc="1881983895" name="modules/locale/org-netbeans-modules-html-ojet_zh_CN.jar"/>
+        <file crc="422566335" name="modules/org-netbeans-modules-html-ojet.jar"/>
+    </module_version>
+</module>

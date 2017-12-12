@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.java.testrunner.ant">
+    <module_version install_time="1475191506909" last="true" origin="installer" specification_version="1.2.1">
+        <file crc="2757294080" name="config/Modules/org-netbeans-modules-java-testrunner-ant.xml"/>
+        <file crc="1196586335" name="modules/locale/org-netbeans-modules-java-testrunner-ant_ja.jar"/>
+        <file crc="2436051037" name="modules/locale/org-netbeans-modules-java-testrunner-ant_pt_BR.jar"/>
+        <file crc="2515947581" name="modules/locale/org-netbeans-modules-java-testrunner-ant_ru.jar"/>
+        <file crc="1468140631" name="modules/locale/org-netbeans-modules-java-testrunner-ant_zh_CN.jar"/>
+        <file crc="1953998147" name="modules/org-netbeans-modules-java-testrunner-ant.jar"/>
+    </module_version>
+</module>

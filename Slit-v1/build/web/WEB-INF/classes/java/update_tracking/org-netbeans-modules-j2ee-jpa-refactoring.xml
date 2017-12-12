@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.j2ee.jpa.refactoring">
+    <module_version install_time="1475191476869" last="true" origin="installer" specification_version="1.31.1">
+        <file crc="3982505257" name="config/Modules/org-netbeans-modules-j2ee-jpa-refactoring.xml"/>
+        <file crc="4188266177" name="modules/locale/org-netbeans-modules-j2ee-jpa-refactoring_ja.jar"/>
+        <file crc="2592332782" name="modules/locale/org-netbeans-modules-j2ee-jpa-refactoring_pt_BR.jar"/>
+        <file crc="2329201163" name="modules/locale/org-netbeans-modules-j2ee-jpa-refactoring_ru.jar"/>
+        <file crc="1322513914" name="modules/locale/org-netbeans-modules-j2ee-jpa-refactoring_zh_CN.jar"/>
+        <file crc="628327109" name="modules/org-netbeans-modules-j2ee-jpa-refactoring.jar"/>
+    </module_version>
+</module>

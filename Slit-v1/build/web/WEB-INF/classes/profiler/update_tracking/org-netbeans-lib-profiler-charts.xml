@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.lib.profiler.charts/1">
+    <module_version install_time="1475191577926" last="true" origin="installer" specification_version="1.30.1">
+        <file crc="407947687" name="config/Modules/org-netbeans-lib-profiler-charts.xml"/>
+        <file crc="514601012" name="modules/locale/org-netbeans-lib-profiler-charts_ja.jar"/>
+        <file crc="4004613087" name="modules/locale/org-netbeans-lib-profiler-charts_pt_BR.jar"/>
+        <file crc="3493799738" name="modules/locale/org-netbeans-lib-profiler-charts_ru.jar"/>
+        <file crc="775455657" name="modules/locale/org-netbeans-lib-profiler-charts_zh_CN.jar"/>
+        <file crc="3448384058" name="modules/org-netbeans-lib-profiler-charts.jar"/>
+    </module_version>
+</module>

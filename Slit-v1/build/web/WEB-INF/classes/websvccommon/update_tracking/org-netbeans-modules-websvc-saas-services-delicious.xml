@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.websvc.saas.services.delicious">
+    <module_version install_time="1475191383936" last="true" origin="installer" specification_version="1.27.1">
+        <file crc="3915387453" name="config/Modules/org-netbeans-modules-websvc-saas-services-delicious.xml"/>
+        <file crc="1929403684" name="modules/locale/org-netbeans-modules-websvc-saas-services-delicious_ja.jar"/>
+        <file crc="1525286175" name="modules/locale/org-netbeans-modules-websvc-saas-services-delicious_pt_BR.jar"/>
+        <file crc="1361038635" name="modules/locale/org-netbeans-modules-websvc-saas-services-delicious_ru.jar"/>
+        <file crc="3190026235" name="modules/locale/org-netbeans-modules-websvc-saas-services-delicious_zh_CN.jar"/>
+        <file crc="2927585533" name="modules/org-netbeans-modules-websvc-saas-services-delicious.jar"/>
+    </module_version>
+</module>

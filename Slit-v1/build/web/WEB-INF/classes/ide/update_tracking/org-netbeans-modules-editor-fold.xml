@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.editor.fold/1">
+    <module_version install_time="1475191135753" last="true" origin="installer" specification_version="1.45.1">
+        <file crc="1352432432" name="config/Modules/org-netbeans-modules-editor-fold.xml"/>
+        <file crc="575025363" name="modules/locale/org-netbeans-modules-editor-fold_ja.jar"/>
+        <file crc="905844170" name="modules/locale/org-netbeans-modules-editor-fold_pt_BR.jar"/>
+        <file crc="3368595624" name="modules/locale/org-netbeans-modules-editor-fold_ru.jar"/>
+        <file crc="1920690406" name="modules/locale/org-netbeans-modules-editor-fold_zh_CN.jar"/>
+        <file crc="3428342589" name="modules/org-netbeans-modules-editor-fold.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.java.platform.ui/1">
+    <module_version install_time="1475191390737" last="true" origin="installer" specification_version="1.41.1">
+        <file crc="175784056" name="config/Modules/org-netbeans-modules-java-platform-ui.xml"/>
+        <file crc="4062343904" name="modules/locale/org-netbeans-modules-java-platform-ui_ja.jar"/>
+        <file crc="791645850" name="modules/locale/org-netbeans-modules-java-platform-ui_pt_BR.jar"/>
+        <file crc="3784190090" name="modules/locale/org-netbeans-modules-java-platform-ui_ru.jar"/>
+        <file crc="3173879221" name="modules/locale/org-netbeans-modules-java-platform-ui_zh_CN.jar"/>
+        <file crc="2437624094" name="modules/org-netbeans-modules-java-platform-ui.jar"/>
+    </module_version>
+</module>

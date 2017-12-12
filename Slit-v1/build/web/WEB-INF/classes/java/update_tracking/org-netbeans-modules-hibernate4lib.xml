@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.hibernate4lib/1">
+    <module_version install_time="1475191461027" last="true" origin="installer" specification_version="1.7.1.238">
+        <file crc="3656589923" name="config/Modules/org-netbeans-modules-hibernate4lib.xml"/>
+        <file crc="914671301" name="modules/ext/hibernate4/antlr-2.7.7.jar"/>
+        <file crc="3261711198" name="modules/ext/hibernate4/c3p0-0.9.2.1.jar"/>
+        <file crc="2696327360" name="modules/ext/hibernate4/cglib-2.2.jar"/>
+        <file crc="28241745" name="modules/ext/hibernate4/commons-collections-3.2.1.jar"/>
+        <file crc="2050839146" name="modules/ext/hibernate4/dom4j-1.6.1.jar"/>
+        <file crc="819381540" name="modules/ext/hibernate4/ehcache-core-2.4.3.jar"/>
+        <file crc="3627061531" name="modules/ext/hibernate4/hibernate-c3p0-4.3.1.Final.jar"/>
+        <file crc="3456841331" name="modules/ext/hibernate4/hibernate-commons-annotations-4.0.4.Final.jar"/>
+        <file crc="1953571957" name="modules/ext/hibernate4/hibernate-core-4.3.1.Final.jar"/>
+        <file crc="1982362145" name="modules/ext/hibernate4/hibernate-ehcache-4.3.1.Final.jar"/>
+        <file crc="3682792699" name="modules/ext/hibernate4/hibernate-entitymanager-4.3.1.Final.jar"/>
+        <file crc="4266645660" name="modules/ext/hibernate4/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+        <file crc="1698771788" name="modules/ext/hibernate4/hibernate-jpamodelgen-4.3.1.Final.jar"/>
+        <file crc="2199099414" name="modules/ext/hibernate4/hibernate-tools-4.3.1.CR1.jar"/>
+        <file crc="1337877988" name="modules/ext/hibernate4/javassist-3.18.1-GA.jar"/>
+        <file crc="736999952" name="modules/ext/hibernate4/jboss-logging-3.1.3.GA.jar"/>
+        <file crc="1192821502" name="modules/ext/hibernate4/jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
+        <file crc="2975577238" name="modules/ext/hibernate4/jtidy-r8-20060801.jar"/>
+        <file crc="2354532136" name="modules/ext/hibernate4/log4j-1.2.12.jar"/>
+        <file crc="2914977513" name="modules/ext/hibernate4/mchange-commons-java-0.2.3.4.jar"/>
+        <file crc="446027275" name="modules/ext/hibernate4/slf4j-api-1.6.1.jar"/>
+        <file crc="125743501" name="modules/ext/hibernate4/slf4j-log4j12-1.6.1.jar"/>
+        <file crc="445942024" name="modules/ext/hibernate4/slf4j-simple-1.6.1.jar"/>
+        <file crc="3663454278" name="modules/locale/org-netbeans-modules-hibernate4lib_ja.jar"/>
+        <file crc="740806543" name="modules/locale/org-netbeans-modules-hibernate4lib_pt_BR.jar"/>
+        <file crc="3020151723" name="modules/locale/org-netbeans-modules-hibernate4lib_ru.jar"/>
+        <file crc="2839634577" name="modules/locale/org-netbeans-modules-hibernate4lib_zh_CN.jar"/>
+        <file crc="1714482527" name="modules/org-netbeans-modules-hibernate4lib.jar"/>
+    </module_version>
+</module>

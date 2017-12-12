@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javascript2.source.query/0">
+    <module_version install_time="1475191634411" last="true" origin="installer" specification_version="0.1.1">
+        <file crc="1071991252" name="config/Modules/org-netbeans-modules-javascript2-source-query.xml"/>
+        <file crc="670667808" name="modules/locale/org-netbeans-modules-javascript2-source-query_ja.jar"/>
+        <file crc="464547629" name="modules/locale/org-netbeans-modules-javascript2-source-query_pt_BR.jar"/>
+        <file crc="2607350391" name="modules/locale/org-netbeans-modules-javascript2-source-query_ru.jar"/>
+        <file crc="2923914464" name="modules/locale/org-netbeans-modules-javascript2-source-query_zh_CN.jar"/>
+        <file crc="2905841282" name="modules/org-netbeans-modules-javascript2-source-query.jar"/>
+    </module_version>
+</module>

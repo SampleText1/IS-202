@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.java.hints.declarative.test">
+    <module_version install_time="1475191496139" last="true" origin="installer" specification_version="1.16.1.1.1">
+        <file crc="386055126" name="config/Modules/org-netbeans-modules-java-hints-declarative-test.xml"/>
+        <file crc="3577308316" name="modules/locale/org-netbeans-modules-java-hints-declarative-test_ja.jar"/>
+        <file crc="1919550906" name="modules/locale/org-netbeans-modules-java-hints-declarative-test_pt_BR.jar"/>
+        <file crc="3869502353" name="modules/locale/org-netbeans-modules-java-hints-declarative-test_ru.jar"/>
+        <file crc="1877907668" name="modules/locale/org-netbeans-modules-java-hints-declarative-test_zh_CN.jar"/>
+        <file crc="3903359201" name="modules/org-netbeans-modules-java-hints-declarative-test.jar"/>
+    </module_version>
+</module>

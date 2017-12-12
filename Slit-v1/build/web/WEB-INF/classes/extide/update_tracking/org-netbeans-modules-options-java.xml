@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.options.java">
+    <module_version install_time="1475191376980" last="true" origin="installer" specification_version="1.14.1">
+        <file crc="3971780861" name="config/Modules/org-netbeans-modules-options-java.xml"/>
+        <file crc="3231872254" name="modules/locale/org-netbeans-modules-options-java_ja.jar"/>
+        <file crc="1712983589" name="modules/locale/org-netbeans-modules-options-java_pt_BR.jar"/>
+        <file crc="2506825893" name="modules/locale/org-netbeans-modules-options-java_ru.jar"/>
+        <file crc="662598824" name="modules/locale/org-netbeans-modules-options-java_zh_CN.jar"/>
+        <file crc="1998210626" name="modules/org-netbeans-modules-options-java.jar"/>
+    </module_version>
+</module>

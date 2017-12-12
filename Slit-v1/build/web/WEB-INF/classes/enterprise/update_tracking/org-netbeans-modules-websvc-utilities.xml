@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.websvc.utilities/0">
+    <module_version install_time="1475191826604" last="true" origin="installer" specification_version="1.28.1">
+        <file crc="3297036041" name="config/Modules/org-netbeans-modules-websvc-utilities.xml"/>
+        <file crc="3989748685" name="modules/locale/org-netbeans-modules-websvc-utilities_ja.jar"/>
+        <file crc="1793306241" name="modules/locale/org-netbeans-modules-websvc-utilities_pt_BR.jar"/>
+        <file crc="2256651222" name="modules/locale/org-netbeans-modules-websvc-utilities_ru.jar"/>
+        <file crc="3490670842" name="modules/locale/org-netbeans-modules-websvc-utilities_zh_CN.jar"/>
+        <file crc="4214212263" name="modules/org-netbeans-modules-websvc-utilities.jar"/>
+    </module_version>
+</module>
