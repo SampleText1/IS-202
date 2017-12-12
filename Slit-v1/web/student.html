@@ -14,12 +14,14 @@ and open the template in the editor.
         <div>
             <h1> SLIT SampleText </h1>
             <p>
-                <a href="upload.html" class="ibutton">Last opp fil</a>
-            </p>
+               <form action ="upload.html">
+               	<input type="submit" value="Last opp fil"/>
+               </form>
+          
             <form action="ListModulesServlet" method="post">
              <input type="Submit" name="hent" value="Modulliste">        
             </form>
-            <br>
+            
             <center>
              <form action="index.html" method="post">
              <input type="Submit" name="hent" value="Logg ut">
