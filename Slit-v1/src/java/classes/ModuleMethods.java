@@ -19,7 +19,7 @@ import javax.sql.DataSource;
 public class ModuleMethods {
    
     Connection conn;        // Must be defined here as class variables, get their value in the login method
-    Statement stmt;         //Slik at de forsvinner.
+    Statement stmt;         //
    
    
     public void Connect(PrintWriter out) {
@@ -28,7 +28,7 @@ public class ModuleMethods {
          Context cont = new InitialContext();
          DataSource ds = (DataSource)cont.lookup("java:comp/env/jdbc/LocalhostDS"); //
          //DataSource ds = (DataSource)cont.lookup("jdbc/LocalhostDS");
-         conn =  ds.getConnection();  //Kobler seg til.
+         conn =  ds.getConnection();  //Connects
  
          // Step 2: Allocate a 'Statement' object in the Connection
          stmt = conn.createStatement();
@@ -77,7 +77,7 @@ public class ModuleMethods {
    public void skrivEnModul(String id, PrintWriter out)
     {   
        
-        //PRØVER Å KOMBINERE FLERE TABELLER
+        //Tries to combine multiple tables
         PreparedStatement getStudents; 
          
          try {
