@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Calendar;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -190,15 +191,56 @@ public class StudentMethods {
               System.out.println(ex.getCause());
               System.out.println("error");
               out.println("Ikke hentet fra DB " +ex);
-      
-       
+         }
    }
    
    
    
    
-   
-   
-   
+    public void addUser(String firstName, String lastName, String pass, String email, PrintWriter out){
+       
+        //name = name;
+        Calendar now = Calendar.getInstance();
+             int year = now.get(Calendar.YEAR);
+             String yearInString = String.valueOf(year);
+        email = firstName + yearInString + "@uia.no";
+        String strSelect3 = ("insert into userAccount(firstName, lastName, pass, email) values('"+firstName+"' , '"+lastName+"' , '"+pass+"' , '"+email+"');");
+        
+        // System.out.println("The SQL query is: " + strSelect2);
+        // out. println("The SQL query is: " + strSelect2);
+       
+        System.out.println();
+        out.println();
+ 
+         try {
+             Statement statement = conn.createStatement();
+            int rset3 = statement.executeUpdate(strSelect3);
+            conn.commit();
+               if (rset3 != 0) {
+                    //out.println(rset2);
+                    System.out.println("Bruker laget");
+                    
+            } else {
+                out.println("Inserting record get failure");
+            }
+       
+              } // end try    
+         catch (Exception ex) {
+              System.out.println(ex.getCause());
+              System.out.println("error");
+              out.println("Ikke hentet fra DB " +ex);
+         }
+   }
 }
-}
+    
+   
+   
+   
+   
+   
+
+      
+   
+   
+   
+
