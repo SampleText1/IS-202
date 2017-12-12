@@ -27,12 +27,7 @@ public class DBFileDownloadServlet extends HttpServlet {
  
     // size of byte buffer to send file
     private static final int BUFFER_SIZE = 4096;   
-     
-    // database connection settings
-    private String dbURL = "org:mariadb://localhost:3306/slit";
-    private String dbUser = "root";
-    private String dbPass = "";
-     
+      
     protected void doGet(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
         // get upload id from URL's parameters
@@ -44,14 +39,14 @@ public class DBFileDownloadServlet extends HttpServlet {
         try {
             Statement statement = conn.createStatement();
 
-            PreparedStatement ps = conn.prepareStatement("SELECT * FROM uploads WHERE contact_id = ?");
+            PreparedStatement ps = conn.prepareStatement("SELECT * FROM uploads WHERE fileID = ?");
             ps.setInt(1, uploadId);
  
             ResultSet result = ps.executeQuery();
             if (result.next()) {
                 // gets file name and file blob data
                 String fileName = result.getString("fileName");
-                Blob blob = result.getBlob("photo");
+                Blob blob = result.getBlob("file");
                 InputStream inputStream = blob.getBinaryStream();
                 int fileLength = inputStream.available();
                  
