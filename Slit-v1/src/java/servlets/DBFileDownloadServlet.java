@@ -50,7 +50,7 @@ public class DBFileDownloadServlet extends HttpServlet {
             ResultSet result = ps.executeQuery();
             if (result.next()) {
                 // gets file name and file blob data
-                String fileName = result.getString("last_name");
+                String fileName = result.getString("fileName");
                 Blob blob = result.getBlob("photo");
                 InputStream inputStream = blob.getBinaryStream();
                 int fileLength = inputStream.available();

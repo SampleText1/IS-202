@@ -37,15 +37,15 @@ public class UploadToDBServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        String firstName = request.getParameter("name");
+        String modID = request.getParameter("id");
+        
         DbConnection dbCode = new DbConnection();
         Connection conn = null;
         try {
-            // Connection to Database
-            // (See more in JDBC Tutorial).
             conn = dbCode.Connect();
             conn.setAutoCommit(false);
- 
-            String description = request.getParameter("description");
  
             // Part list (multi files).
             for (Part part : request.getParts()) {
@@ -54,7 +54,7 @@ public class UploadToDBServlet extends HttpServlet {
                     // File data
                     InputStream is = part.getInputStream();
                     // Write to file
-                    this.writeToDB(conn, fileName, is, description);
+                    this.writeToDB(conn, modID, firstName, fileName, is);
                 }
             }
             conn.commit();
@@ -72,46 +72,29 @@ public class UploadToDBServlet extends HttpServlet {
     }
  
     private String extractFileName(Part part) {
-        // form-data; name="file"; filename="C:\file1.zip"
-        // form-data; name="file"; filename="C:\Note\file2.zip"
         String contentDisp = part.getHeader("content-disposition");
         String[] items = contentDisp.split(";");
         for (String s : items) {
             if (s.trim().startsWith("filename")) {
-                // C:\file1.zip
-                // C:\Note\file2.zip
                 String clientFileName = s.substring(s.indexOf("=") + 2, s.length() - 1);
                 clientFileName = clientFileName.replace("\\", "/");
                 int i = clientFileName.lastIndexOf('/');
-                // file1.zip
-                // file2.zip
                 return clientFileName.substring(i + 1);
             }
         }
         return null;
     }
  
-    private Long getMaxAttachmentId(Connection conn) throws SQLException {
-        String sql = "Select max(a.contact_id) from uploads a";
-        PreparedStatement pstm = conn.prepareStatement(sql);
-        ResultSet rs = pstm.executeQuery();
-        if (rs.next()) {
-            long max = rs.getLong(1);
-            return max;
-        }
-        return 0L;
-    }
+    private void writeToDB(Connection conn, String modID, String firstName, String fileName, InputStream is) throws SQLException {
  
-    private void writeToDB(Connection conn, String fileName, InputStream is, String description) throws SQLException {
- 
-        String sql = "Insert into uploads(first_name,last_name,photo) " //
-                + " values (?,?,?) ";
+        String sql = "Insert into uploads(modID,name,fileName,file) " //
+                + " values (?,?,?,?) ";
         PreparedStatement pstm = conn.prepareStatement(sql);
  
-        Long id = this.getMaxAttachmentId(conn) + 1;
-        pstm.setLong(1, id);
-        pstm.setString(2, fileName);
-        pstm.setBlob(3, is);
+        pstm.setString(1, modID);
+        pstm.setString(2, firstName);
+        pstm.setString(3, fileName);
+        pstm.setBlob(4, is);
         pstm.executeUpdate();
     }
  
