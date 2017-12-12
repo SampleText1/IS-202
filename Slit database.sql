@@ -28,24 +28,5 @@ CREATE TABLE uploads (
   PRIMARY KEY (contact_id)
 );
 
-insert into useraccount(id, firstname)
-values(1, 'Marius');
-
-use slit;
-
-CREATE TABLE users (
-    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(50) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-);
-
-insert into users(username, password)
-values('vegard2', 'passord22');
-
-select * from userAccount;
-
-delete from userAccount;
-where id = 1;
 
 
