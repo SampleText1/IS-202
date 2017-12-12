@@ -19,7 +19,7 @@ import javax.sql.DataSource;
 public class StudentMethods {
    
       Connection conn;        // Must be defined here as class variables, get their value in the login method
-    Statement stmt;         //Slik at de forsvinner.
+    Statement stmt;        
    
    
     public void Connect(PrintWriter out) {
@@ -80,7 +80,7 @@ public class StudentMethods {
     public void skrivEnStudent(String id, PrintWriter out)
     {   
        
-        //Kombinerer flere tabeller! Må ha useraccount, module og modulbesvarelse tabeller!
+        //Tries to combine multible tables
         PreparedStatement getStudents; 
          
          try {
@@ -111,7 +111,7 @@ public class StudentMethods {
                  }  // end if
                 
                 int rowCount = 0;
-                rset.beforeFirst(); //Måtte ha med denne, ellers ble den første raden hoppet over!
+                rset.beforeFirst(); //Used so that the first row does´nt get skipped
                 while (rset.next()) {   // Move the cursor to the next row, return false if no more row
                   
                    String title = rset.getString("title");
