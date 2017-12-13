@@ -177,7 +177,9 @@ Connection conn = dbCode.Connect();
    
    
    
-   
+    // Method for user creation where it takes four parameters.
+    // The method also takes the four first characters and the first of the lastname, in addition to the last digits
+    // of the current year to generate a email which is used to log in to the system.
     public void addUser(String firstName, String lastName, String pass, String email, PrintWriter out){
 
         DateFormat df = new SimpleDateFormat("yy"); // Just the year, with 2 digits
@@ -220,7 +222,7 @@ Connection conn = dbCode.Connect();
          }
     }
 
-    
+    // method for notifying user that creation was done. Takes email as parameter
     public void message(String email, String message, PrintWriter out){
 
         
@@ -231,7 +233,7 @@ Connection conn = dbCode.Connect();
        
         System.out.println();
         out.println();
- 
+       // try and catch
          try {
              Statement statement = conn.createStatement();
             int rset3 = statement.executeUpdate(strSelect3);
