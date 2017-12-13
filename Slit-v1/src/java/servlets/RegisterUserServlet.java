@@ -14,10 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import lib.DbConnection;
  
-/**
- *
- * @author Mikael
- */
+
+//Use of annotation
 @WebServlet(name = "RegisterUserServlet", urlPatterns = {"/RegisterUserServlet"})
 public class RegisterUserServlet extends HttpServlet {
  
@@ -25,7 +23,7 @@ public class RegisterUserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
          throws ServletException, IOException {
          try (PrintWriter out = response.getWriter()) {
-           
+           // parameterrequest from the html file
          String FirstName = request.getParameter("firstName");
          String LastName = request.getParameter("lastName");
          String pass = request.getParameter("pass");
@@ -43,12 +41,14 @@ public class RegisterUserServlet extends HttpServlet {
         lastNamemax = lastNamemax.substring(0, maxLengthL);  
         
         email = firstNamemax.toLowerCase() + lastNamemax.toLowerCase() + yearInString + "@uia.no";
-           
+           // Creating a new StudentMethods object and calling upon the addUser method.
+           // Creating a dbconnection object
             StudentMethods sm = new StudentMethods();
             DbConnection db = new DbConnection();
             db.Connect();
             sm.addUser(FirstName, LastName, pass, email, out);
             
+          //Forwarding to index.html using a include method
             RequestDispatcher rs = request.getRequestDispatcher("index.html");
             rs.include(request, response);
             out.println("<div class=alert>Bruker opprettet. Du kan logge inn med:" + email + "</div>");
