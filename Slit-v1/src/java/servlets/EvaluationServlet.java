@@ -5,7 +5,7 @@
  */
 package servlets;
 
-import classes.ModuleMethods;
+import classes.Evaluation;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -13,13 +13,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import lib.DbConnection;
 
 /**
  *
  * @author Mikael
  */
-@WebServlet(name = "ModuleDetail", urlPatterns = {"/ModuleDetail"})
-public class ModuleDetail extends HttpServlet {
+@WebServlet(name = "EvaluationServlet", urlPatterns = {"/EvaluationServlet"})
+public class EvaluationServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,22 +39,28 @@ public class ModuleDetail extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">");
-            out.println("<title>Moduldetaljer</title>");            
+            out.println("<title>Servlet EvaluationServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Informasjon om modul</h1>");
             
             String id  = request.getParameter("id");
-            String title = request.getParameter("title");
-            String description = request.getParameter("description");
+            String s_id = request.getParameter("s_id");
+            String m_id = request.getParameter("m_id");
+            String vurdering = request.getParameter("vurdering");
+            out.println("</div>");
+            out.println("<br>");
             
-            ModuleMethods dbCode = new ModuleMethods();
-            dbCode.Connect(out);
-            dbCode.skrivEnModul(id, out);
-            //dbCode.close();
+            DbConnection db = new DbConnection();
+            Evaluation ev = new Evaluation();    
             
+            db.Connect();
+            ev.listeVurderingsKø(out);
             
+            out.println("<br><center>\n" +
+            "<form action=\"ansatt.html\" method=\"post\">" +
+             "<input type=\"Submit\" name=\"id\" value=\"Tilbake\"> " +       
+           " </form> " +
+            "</center>\n");
             out.println("</body>");
             out.println("</html>");
         }
@@ -72,7 +79,7 @@ public class ModuleDetail extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-}
+    }
 
     /**
      * Handles the HTTP <code>POST</code> method.

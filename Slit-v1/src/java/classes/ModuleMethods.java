@@ -19,7 +19,7 @@ import javax.sql.DataSource;
 public class ModuleMethods {
    
     Connection conn;        // Must be defined here as class variables, get their value in the login method
-    Statement stmt;         //
+    Statement stmt;         //Slik at de forsvinner.
    
    
     public void Connect(PrintWriter out) {
@@ -28,7 +28,7 @@ public class ModuleMethods {
          Context cont = new InitialContext();
          DataSource ds = (DataSource)cont.lookup("java:comp/env/jdbc/LocalhostDS"); //
          //DataSource ds = (DataSource)cont.lookup("jdbc/LocalhostDS");
-         conn =  ds.getConnection();  //Connects
+         conn =  ds.getConnection();  //Kobler seg til.
  
          // Step 2: Allocate a 'Statement' object in the Connection
          stmt = conn.createStatement();
@@ -50,21 +50,18 @@ public class ModuleMethods {
          
          try {
                 getModules = conn.prepareStatement("select * from module");
-                //getModules.setString(1,"lastName");
                 
                 ResultSet rset = getModules.executeQuery();
  
-                // Step 4: Process the ResultSet by scrolling the cursor forward via next().
-                //  For each row, retrieve the contents of the cells with getXxx(columnName).
                 int rowCount = 0;
-                while(rset.next()) {   // Move the cursor to the next row, return false if no more row
+                while(rset.next()) {
                     String id = rset.getString("id");
                     String title = rset.getString("title");
                     out.format(STUDENT,id,title);
                     out.println("<br>");
                     
                     ++rowCount;
-                 }  // end while
+                 }
                  out.println("<br>Antall moduler = " + rowCount);
          } // end try     
          catch (SQLException ex) {
@@ -77,7 +74,7 @@ public class ModuleMethods {
    public void skrivEnModul(String id, PrintWriter out)
     {   
        
-        //Tries to combine multiple tables
+        //PRØVER Å KOMBINERE FLERE TABELLER
         PreparedStatement getStudents; 
          
          try {
@@ -98,9 +95,13 @@ public class ModuleMethods {
                     
                     
                     out.println("<h3>Navn: " + title + "<br> Beskrivelse: " + description + "<br>Mål: " + goals + "<br>Ressurser: " + resources + "<br>Oppgave: " + task + "<br>Frist: " + deadline +"</h3><br>");
-                    out.println("<center>\n" +
-"            <input type=\"button\" class=\"abutton\" onclick=\"history.back();\" value=\"Tilbake\">\n" +
-"            </center>\n" +
+                    out.println("<form action=\"uploadToDB\" method=\"post\" enctype=\"multipart/form-data\">\n" +
+                     "<input type=\"hidden\" name=\"id\" value=" + idString + ">" +
+"                    <center><br><input type=\"text\" name=\"name\" placeholder=\"Navn\"/>\n" +
+"                    <br><input type=\"file\" name=\"file\">\n" +
+"                    <br><input type=\"submit\" value=\"Last opp\">           \n" +
+"        </form>" +
+"            <br><br><input type=\"button\" class=\"abutton\" onclick=\"history.back();\" value=\"Tilbake\">\n" +
 "            <br>");
                     
                    
@@ -114,7 +115,7 @@ public class ModuleMethods {
    public void addModule(String id, String title, String description, String goals, String task, PrintWriter out){
        this.Connect(out);
         //name = name;
-        String strSelect2 = ("insert into modules(id, title, description, goals, task) values('"+id+"' , '"+title+"' , '"+description+"' ,'"+goals+"' ,'"+task+"');");
+        String strSelect2 = ("insert into module(title, description, goals, task) values('"+title+"' , '"+description+"' ,'"+goals+"' ,'"+task+"');");
        
         // System.out.println("The SQL query is: " + strSelect2);
         // out. println("The SQL query is: " + strSelect2);

@@ -46,6 +46,36 @@ public class DbConnection {
         }
         return null;
     }
+    
+     public void close() {
+         
+        try {
+        conn.close();
+        
+        }
+        catch (SQLException ex) {
+                System.out.println("Ikke lukke DB " +ex);
+        }
+    } // end Close
+    
+    
+    
+    public void commit() {
+         
+             try {           
+             conn.commit();
+         } // end try     
+          
+             catch (SQLException ex) {
+                System.out.println("Ikke close DB " +ex);
+                    
+        }
+                
+    }  // end commit
+    
+    
+    
+    
 }
     
 

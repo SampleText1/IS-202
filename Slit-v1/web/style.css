@@ -69,14 +69,20 @@ input {
     background-color: #ffffff;
     border: 0px;
     text-align: center;
-    margin: 0 auto;
+    margin: auto;
     width: 50%;
+    position: relative;
     vertical-align: middle;
     border-radius: 4px;
 }
 
+input[type=text] {
+    margin: auto;
+}
+
 input[type=submit] {
     background-color: #f47920;
+    margin: auto;
     border: none;
     color: #ffffff;
     vertical-align: middle;
@@ -94,7 +100,7 @@ input[type=submit]:active {
 }
 
 input[type=file] {
-    position: relative;
+    position: relateive;
 }
 
 .list {
@@ -158,8 +164,12 @@ input[type=file] {
 
 .alert {
     font-family: Allerta;
+    font-size: 75%;
     color: white;
     position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 4px;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);

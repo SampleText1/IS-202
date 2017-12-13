@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -19,7 +21,7 @@ import javax.sql.DataSource;
 public class StudentMethods {
    
       Connection conn;        // Must be defined here as class variables, get their value in the login method
-    Statement stmt;        
+    Statement stmt;         //Slik at de forsvinner.
    
    
     public void Connect(PrintWriter out) {
@@ -29,6 +31,7 @@ public class StudentMethods {
          DataSource ds = (DataSource)cont.lookup("java:comp/env/jdbc/LocalhostDS"); //
          //DataSource ds = (DataSource)cont.lookup("jdbc/LocalhostDS");
          conn =  ds.getConnection();  //Kobler seg til.
+         
  
          // Step 2: Allocate a 'Statement' object in the Connection
          stmt = conn.createStatement();
@@ -80,7 +83,7 @@ public class StudentMethods {
     public void skrivEnStudent(String id, PrintWriter out)
     {   
        
-        //Tries to combine multible tables
+        //Kombinerer flere tabeller! Må ha useraccount, module og modulbesvarelse tabeller!
         PreparedStatement getStudents; 
          
          try {
@@ -111,7 +114,7 @@ public class StudentMethods {
                  }  // end if
                 
                 int rowCount = 0;
-                rset.beforeFirst(); //Used so that the first row does´nt get skipped
+                rset.beforeFirst(); //Måtte ha med denne, ellers ble den første raden hoppet over!
                 while (rset.next()) {   // Move the cursor to the next row, return false if no more row
                   
                    String title = rset.getString("title");
@@ -198,12 +201,19 @@ public class StudentMethods {
    
    
     public void addUser(String firstName, String lastName, String pass, String email, PrintWriter out){
-       
-        //name = name;
-        Calendar now = Calendar.getInstance();
-             int year = now.get(Calendar.YEAR);
-             String yearInString = String.valueOf(year);
-        email = firstName + yearInString + "@uia.no";
+
+        DateFormat df = new SimpleDateFormat("yy"); // Just the year, with 2 digits
+        String yearInString = df.format(Calendar.getInstance().getTime());
+             
+        String firstNamemax = firstName;   
+        int maxLengthF = (firstNamemax.length() < 4)?firstNamemax.length():4;
+        firstNamemax = firstNamemax.substring(0, maxLengthF);  
+        
+        String lastNamemax = lastName;   
+        int maxLengthL = (lastNamemax.length() < 1)?lastNamemax.length():1;
+        lastNamemax = lastNamemax.substring(0, maxLengthL);  
+        
+        email = firstNamemax.toLowerCase() + lastNamemax.toLowerCase() + yearInString + "@uia.no";
         String strSelect3 = ("insert into userAccount(firstName, lastName, pass, email) values('"+firstName+"' , '"+lastName+"' , '"+pass+"' , '"+email+"');");
         
         // System.out.println("The SQL query is: " + strSelect2);
@@ -230,10 +240,40 @@ public class StudentMethods {
               System.out.println("error");
               out.println("Ikke hentet fra DB " +ex);
          }
-   }
-}
+    }
+
     
-   
+    public void message(String email, String message, PrintWriter out){
+
+        
+        String strSelect3 = ("insert into message(email, message) values('"+email+"', '"+message+"');");
+        
+        // System.out.println("The SQL query is: " + strSelect2);
+        // out. println("The SQL query is: " + strSelect2);
+       
+        System.out.println();
+        out.println();
+ 
+         try {
+             Statement statement = conn.createStatement();
+            int rset3 = statement.executeUpdate(strSelect3);
+            conn.commit();
+               if (rset3 != 0) {
+                    //out.println(rset2);
+                    System.out.println("Bruker laget");
+                    
+            } else {
+                out.println("Inserting record get failure");
+            }
+       
+              } // end try    
+         catch (Exception ex) {
+              System.out.println(ex.getCause());
+              System.out.println("error");
+              out.println("Ikke hentet fra DB " +ex);
+         }
+    }
+}
    
    
    
