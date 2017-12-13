@@ -9,7 +9,6 @@ import java.sql.Statement;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Properties;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -202,10 +201,7 @@ public class StudentMethods {
    
    
     public void addUser(String firstName, String lastName, String pass, String email, PrintWriter out){
-       
-         Properties props = new Properties();
-         props.put("charSet", "cp1252");
-        
+
         DateFormat df = new SimpleDateFormat("yy"); // Just the year, with 2 digits
         String yearInString = df.format(Calendar.getInstance().getTime());
              
@@ -244,10 +240,40 @@ public class StudentMethods {
               System.out.println("error");
               out.println("Ikke hentet fra DB " +ex);
          }
-   }
-}
+    }
+
     
-   
+    public void message(String email, String message, PrintWriter out){
+
+        
+        String strSelect3 = ("insert into message(email, message) values('"+email+"', '"+message+"');");
+        
+        // System.out.println("The SQL query is: " + strSelect2);
+        // out. println("The SQL query is: " + strSelect2);
+       
+        System.out.println();
+        out.println();
+ 
+         try {
+             Statement statement = conn.createStatement();
+            int rset3 = statement.executeUpdate(strSelect3);
+            conn.commit();
+               if (rset3 != 0) {
+                    //out.println(rset2);
+                    System.out.println("Bruker laget");
+                    
+            } else {
+                out.println("Inserting record get failure");
+            }
+       
+              } // end try    
+         catch (Exception ex) {
+              System.out.println(ex.getCause());
+              System.out.println("error");
+              out.println("Ikke hentet fra DB " +ex);
+         }
+    }
+}
    
    
    

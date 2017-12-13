@@ -2,9 +2,7 @@ package servlets;
  
 import classes.StudentMethods;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintWriter;
-import static java.lang.System.out;
 import java.sql.Connection;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,7 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import lib.DbConnection;
-import static org.apache.openejb.client.Client.request;
  
 /**
  *
@@ -53,17 +50,15 @@ public class RegisterUserServlet extends HttpServlet {
             out.println("</div>");
             out.println("</body>");
             out.println("</html>");
+            RequestDispatcher rs = request.getRequestDispatcher("index.html");
+            rs.include(request, response);
+            out.println("<div class=alert>Bruker opprettet</div>");
         }
     
          
         Connection conn = null; // connection to the database
         String message = null;  // message will be sent back to client
 
-        {
-           out.println("<div class=alert>Fil lastet opp</div>");
-           RequestDispatcher rs = request.getRequestDispatcher("upload.html");
-           rs.include(request, response);
-        }
 }
 }
  
