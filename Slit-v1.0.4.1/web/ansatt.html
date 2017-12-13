@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>SLIT Prosjekt</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <h1> SLIT SampleText </h1>
+            <br>
+            
+            <form action="ListStudentsServlet" method="post">
+             <input type="Submit" name="hent" value="Elevliste">        
+            </form>  
+            
+            <form action="ListModulesServlet" method="post">
+             <input type="Submit" name="hent" value="Modulliste">        
+            </form> 
+            
+            <form action="addStudentServlet" method="post">
+                <input type ="text" name ="firstName" placeholder="Fornavn"><br>
+                <input type ="text" name ="lastName" placeholder="Etternavn"><br>
+                <input type ="text" name ="email" placeholder="E-Mail"><br>
+                <input type ="password" name ="pass" placeholder="Passord"><br>
+             <input type="Submit" name="hent" value="Legg til Student">        
+            </form>
+            
+            <form action="AddModuleServlet" method="post">
+                <input type ="text" name ="title" placeholder="Tittel"><br>
+                <input type ="text" name ="description" placeholder="Beskrivelse"><br>
+                <input type ="text" name ="goals" placeholder="Læringsmål"><br>
+                <input type ="text" name ="task" placeholder="Oppgave"><br>
+             
+               
+             <input type="Submit" name="hent" value="Legg til Modul">
+            </form>
+            <br>
+            <form action="index.html" method="post">
+            <input type="Submit" name="hent" value="Logg ut">
+            </form>
+            
+            <form action="EvaluationServlet" method="post">
+             <input type="Submit" name="hent" value="Vurderingskø">        
+            </form> 
+            
+        </div>
+    </body>
+</html>
