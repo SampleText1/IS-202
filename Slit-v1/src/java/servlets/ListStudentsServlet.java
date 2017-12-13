@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import lib.DbConnection;
  
 /**
  *
@@ -41,9 +42,10 @@ public class ListStudentsServlet extends HttpServlet {
             out.println("<div class=list>");
            
            
-            StudentMethods dbCode = new StudentMethods();
-            dbCode.Connect(out);
-            dbCode.printStudents(out);
+            StudentMethods sm = new StudentMethods();
+            DbConnection db = new DbConnection();
+            db.Connect();
+            sm.printStudents(out);
            
             out.println("</div>");
             out.println("<form action=\"deleteStudentServlet\" method=\"post\">\n" +

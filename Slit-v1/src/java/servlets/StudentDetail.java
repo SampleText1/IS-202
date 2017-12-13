@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import lib.DbConnection;
 
 /**
  *
@@ -49,9 +50,10 @@ public class StudentDetail extends HttpServlet {
 
             out.println("<h2>Oversikt over eleven du har valgt:</h2>");
             out.println("<h3>StudentID er  " +id+ "</h3>");
-            StudentMethods dbCode = new StudentMethods();
-            dbCode.Connect(out);
-            dbCode.skrivEnStudent(id, out);
+            StudentMethods sm = new StudentMethods();
+            DbConnection db = new DbConnection();
+            db.Connect();
+            sm.skrivEnStudent(id, out);
             //dbCode.close();
             
             out.println("<center>\n" +

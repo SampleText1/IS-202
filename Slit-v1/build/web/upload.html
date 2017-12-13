@@ -7,29 +7,12 @@
 <body>
     <center>
         <h1>Last opp fil</h1>
-        <form method="post" action="uploadServlet" enctype="multipart/form-data">
-            <table border="0">
-                <br>
-                <br>
-                <tr>
-                    <td>First Name: </td>
-                    <td><input type="text" name="first_name" size="50"/></td>
-                </tr>
-                <tr>
-                    <td>Last Name: </td>
-                    <td><input type="text" name="last_name" size="50"/></td>
-                </tr>
-                <tr>
-                    <td>Portrait Photo: </td>
-                    <td><input type="file" name="photo" size="50"/></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="submit" value="Save">
-                    </td>
-                </tr>
-      
-            </table>
+        <form action="uploadToDB" method="post" enctype="multipart/form-data">
+                    <input type="text" value="idString" readonly>
+                    <input type="text" name="name" placeholder="Navn"/>
+                    <br>
+                    <input type="file" name="file">
+                    <input type="submit" value="Last opp">           
         </form>
          <form action="student.html" method="post">
              <input type="Submit" name="hent" value="Tilbake">

@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import classes.StudentMethods;
+import lib.DbConnection;
 
 /**
  *
@@ -15,6 +16,7 @@ import classes.StudentMethods;
  */
 @WebServlet(name = "addStudentServlet", urlPatterns = {"/addStudentServlet"})
 public class AddStudentServlet extends HttpServlet {
+    
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -48,9 +50,10 @@ public class AddStudentServlet extends HttpServlet {
          String email = request.getParameter("email");
          String pass = request.getParameter("pass");
             
-            StudentMethods dbCode = new StudentMethods(); 
-            dbCode.Connect(out);
-            dbCode.addStudent(id, firstName, lastName, email, pass, out); 
+            StudentMethods sm = new StudentMethods();
+            DbConnection db = new DbConnection();
+            db.Connect();
+            sm.addStudent(id, firstName, lastName, email, pass, out); 
             
            /* RequestDispatcher rd = request.getRequestDispatcher("hentStudenter"); 
             rd.forward(request, response); */

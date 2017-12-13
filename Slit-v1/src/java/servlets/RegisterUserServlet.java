@@ -47,7 +47,6 @@ public class RegisterUserServlet extends HttpServlet {
             StudentMethods sm = new StudentMethods();
             DbConnection db = new DbConnection();
             db.Connect();
-            sm.Connect(out);
             sm.addUser(FirstName, LastName, pass, email, out);
             
             RequestDispatcher rs = request.getRequestDispatcher("index.html");

@@ -13,6 +13,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
+import lib.DbConnection;
  
 /**
  *
@@ -20,29 +21,9 @@ import javax.sql.DataSource;
  */
 public class StudentMethods {
    
-      Connection conn;        // Must be defined here as class variables, get their value in the login method
-    Statement stmt;         //Slik at de forsvinner.
-   
-   
-    public void Connect(PrintWriter out) {
-        try {
-         // Step 1: Allocate a database 'Connection' object
-         Context cont = new InitialContext();
-         DataSource ds = (DataSource)cont.lookup("java:comp/env/jdbc/LocalhostDS"); //
-         //DataSource ds = (DataSource)cont.lookup("jdbc/LocalhostDS");
-         conn =  ds.getConnection();  //Kobler seg til.
-         
- 
-         // Step 2: Allocate a 'Statement' object in the Connection
-         stmt = conn.createStatement();
-        }
-        catch (SQLException ex ) {
-            out.println("Not connected to database " +ex);
-        }
-        catch (NamingException nex) {
-            out.println("Not correct naming" + nex);
-        }
-    }
+    
+DbConnection dbCode = new DbConnection();
+Connection conn = dbCode.Connect();
    
    
     public void printStudents(PrintWriter out) {
@@ -52,7 +33,7 @@ public class StudentMethods {
         PreparedStatement getStudents; 
          
          try {
-                getStudents = conn.prepareStatement("select * from useraccount order by ?");
+                getStudents = conn.prepareStatement("select * from useraccount where admin is NULL order by ?");
                 getStudents.setString(1,"lastName");
                 
                 ResultSet rset = getStudents.executeQuery();
@@ -121,12 +102,8 @@ public class StudentMethods {
                    String vurdering = rset.getString("vurdering");
                    String m_id = rset.getString("m_id");
                  
-                  out.println("ModulID: " +m_id+ " Module navn: "+title+" Vurdering: "+vurdering+"<br></h3>");
-                  
-                  out.println("<center>\n" +
-"            <input type=\"button\" class=\"abutton\" onclick=\"history.back();\" value=\"Tilbake\">\n" +
-"            </center>\n" +
-"            <br>");
+                   out.println("<div style=\"module\">ModulID: " +m_id+ " <br>Module navn: "+title+" <br>Vurdering: "+vurdering+"<br></div>"
+                   + "<br>");
                    
                     
                     ++rowCount;
@@ -142,7 +119,7 @@ public class StudentMethods {
    
    
    public void addStudent(String id, String firstName, String lastName, String email, String pass, PrintWriter out){
-       this.Connect(out);
+
         //name = name;
         String strSelect2 = ("insert into userAccount(firstName, lastName, email, pass) values('"+firstName+"' , '"+lastName+"' ,'"+email+"' , '"+pass+"');");
         
@@ -153,7 +130,8 @@ public class StudentMethods {
         out.println();
  
          try {
-            int rset2 = stmt.executeUpdate(strSelect2);
+            Statement statement = conn.createStatement();
+            int rset2 = statement.executeUpdate(strSelect2);
             conn.commit();
                if (rset2 != 0) {
                     //out.println(rset2);
@@ -173,13 +151,13 @@ public class StudentMethods {
    
    
    public void deleteStudent(String arg1, String arg2, PrintWriter out){
-   this.Connect(out);
    String strSelect3 = ("delete from userAccount where id = '" + arg2 + "'");
    
      // System.out.println("The SQL query is: " + strSelect3);
         // out. println("The SQL query is: " + strSelect3);
        try {
-            int rset3 = stmt.executeUpdate(strSelect3);
+           Statement statement = conn.createStatement();
+            int rset3 = statement.executeUpdate(strSelect3);
             conn.commit();
                if (rset3 != 0) {
                     // out.println("Record has been inserted successfully<br>" + rset3 );

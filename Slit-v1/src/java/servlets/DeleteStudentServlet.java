@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import lib.DbConnection;
 
 /**
  *
@@ -51,9 +52,10 @@ public class DeleteStudentServlet extends HttpServlet {
             String arg1 = request.getParameter("arg1");
             String arg2 = request.getParameter("arg2");
             
-            StudentMethods dbCode = new StudentMethods(); 
-            dbCode.Connect(out);
-            dbCode.deleteStudent(arg1, arg2, out);
+            StudentMethods sm = new StudentMethods();
+            DbConnection db = new DbConnection(); 
+            db.Connect();
+            sm.deleteStudent(arg1, arg2, out);
             
             if (arg1.equals ("id")){
             arg1 = "ID";}
