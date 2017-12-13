@@ -182,6 +182,57 @@ ALTER TABLE `uploads`
   ADD CONSTRAINT `FK_modID` FOREIGN KEY (`modID`) REFERENCES `module` (`id`);
 COMMIT;
 
+INSERT INTO `module`(
+    `id`,
+    `title`,
+    `description`,
+    `goals`,
+    `resources`,
+    `task`,
+    `deadline`
+)
+VALUES(
+    NULL,
+    'Modul 1 - Introduksjon til Blue J',
+    'I den aller første modulen skal du bli kjent med programmet vi skal bruke for å lære Java, som er BlueJ.',
+    'Bli bedre kjent med BlueJ.',
+    'Objects First with Java: A Practical Introduction using BlueJ og BlueJ.',
+    'Åpne BlueJ og prøv deg fram. Gjør testoppgavene i kapittel 1.',
+    '2018-01-17'
+),(
+    NULL,
+    'Modul 2 - Klassedefinisjoner',
+    'I denne modulen skal dere lage deres første klasser.',
+    'Målet er å kunne lage en klasse som gjør noe.',
+    'Objects First with Java: A Practical Introduction using BlueJ og BlueJ.',
+    'Lag en klasse som som har metoder som kan returnere en verdi.',
+    '2018-01-30'
+),(
+    NULL,
+    'Modul 3 - Objektinteraksjon',
+    'I denne modulen skal dere lage klasser som kommuniserer med hverandre.',
+    'Målet er å kunne lage klasser som kommuniserer med hverandre.',
+    'Objects First with Java: A Practical Introduction using BlueJ og BlueJ.',
+    'Lag tre klasser som kommuniserer med hverandre.',
+    '2018-02-14'
+),(
+    NULL,
+    'Modul 4 - Gruppering av objekter',
+    'I denne modulen skal dere bli kjent med ArrayList, iteratorer og looper.',
+    'Målet er å forstå hvordan ArrayList fungerer, samt kunne bruke/skrive en iterator/loop.',
+    'Objects First with Java: A Practical Introduction using BlueJ og BlueJ.',
+    'Lag en klasse som går igjennom en liste av et slag ved hjelp av iterator eller loop.',
+    '2018-02-28'
+),(
+    NULL,
+    'Modul 5 - Design av klasser',
+    'I denne modulen skal dere bli bedre til å designe klasser.',
+    'Målet er å lære seg å drive med ansvarsdrevet design.',
+    'Objects First with Java: A Practical Introduction using BlueJ.',
+    'Forklar hva begrepene coupling, cohesion og refactoring betyr.',
+    '2018-03-13'
+);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
